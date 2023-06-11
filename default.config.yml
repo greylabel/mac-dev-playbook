@@ -384,36 +384,21 @@ dockitems_persist:
   - name: "Notion"
     path: "/Applications/Notion.app"
     pos: 14
-  - name: "Adobe Lightroom Classic"
-    path: "/Applications/Adobe Lightroom Classic/Adobe Lightroom Classic.app"
-    pos: 15
-  - name: "Adobe Bridge 2023"
-    path: "/Applications/Adobe Bridge 2023/Adobe Bridge 2023.app"
-    pos: 16
-  - name: "Adobe Premiere Pro 2023"
-    path: "/Applications/Adobe Premiere Pro 2023/Adobe Premiere Pro 2023.app"
-    pos: 17
-  - name: "Adobe Media Encoder 2023"
-    path: "/Applications/Adobe Media Encoder 2023/Adobe Media Encoder 2023.app"
-    pos: 18
-  - name: "Adobe InDesign 2023"
-    path: "/Applications/Adobe InDesign 2023/Adobe InDesign 2023.app"
-    pos: 19
   - name: "Music"
     path: "/System/Applications/Music.app"
-    pos: 20
+    pos: 15
   - name: "VLC"
     path: "/Applications/VLC.app"
-    pos: 21
+    pos: 16
   - name: "TrainerRoad"
     path: "/Applications/TrainerRoad.app"
-    pos: 22
+    pos: 17
   - name: "Reminders"
     path: "/System/Applications/Reminders.app"
-    pos: 23
+    pos: 18
   - name: "Home"
     path: "/System/Applications/Home.app"
-    pos: 24
+    pos: 19
 
 configure_osx: true
 osx_script: "~/.osx --no-restart"
