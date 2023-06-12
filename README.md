@@ -6,7 +6,7 @@ Based on the [Mac Development Ansible Playbook](https://github.com/geerlingguy/m
 
 ## Installation
 
-See the full from-scratch setup document [full-mac-setup.md](full-mac-setup.md) for more details.
+See the full from-scratch setup document [full-mac-setup.md](docs/full-mac-setup.md) for more details.
 
 ### Run without the `post` tag
 

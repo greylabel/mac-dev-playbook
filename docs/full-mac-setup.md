@@ -512,6 +512,7 @@ Open Photos and make sure iCloud sync options are correct.
 #### Siri
 
 #### Terminal
+- Install theme
 
 ### User Applications
 
@@ -521,6 +522,9 @@ Open 1Password, sign in, and set up sync using details from iPhone.
 - Settings -> Appearance -> Always Show in Sidebar :: [Categories, Tags] = checked
 - Settings -> Advanced -> Show debugging tools = checked
 - Settings -> Developer -> Command-Line Interface -> Connect with 1Password CLI = checked
+
+##### CLI Integration
+###### Github
 
 #### Adobe Creative Cloud
 Open 1Password, sign in, and set up sync.
@@ -554,12 +558,19 @@ Open app and do not import and setting or set as default browser.
 Open app and do not import and setting or set as default browser. Do not send usage statistics.
 
 #### iTerm
-- Preferences -> Profiles :: {how to import from json?}
+
+- iTerm2 -> Make iTerm2 Default Term
+- iTerm2 -> Install Shell Integration
+
+- Preferences -> Profiles :: {import profile}
 - Preferences -> Keys -> Hotkey :: Show/hide all windows with a... = checked
 - Preferences -> Keys -> Hotkey :: Hotkey = ^`
 
 #### JetBrains Toolbox
 Open app and do not send usage statistics.
+
+- Setting -> Login 
+
 Apps to install:
 - GoLand
 - PyCharm Professional Edition
