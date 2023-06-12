@@ -292,6 +292,7 @@ Install node with `nvm install`, then select the locally-specified version for u
 You will also need to install the latest npm. Install with `npm install -g npm@latest`.
 
 ### macOS config
+
 ### Manual macOS config
 
 #### System Preferences
@@ -449,11 +450,11 @@ Allow in the Background
 - Finder Settings -> General -> Show these items on the desktop :: [] = unchecked
 - Finder Settings -> General -> New Finder windows show :: {home directory}
 - Finder Settings -> General -> Open folders in tabs instead of new windows = checked
-
 - Finder Settings -> Sidebar -> Favorites :: [Recents, Movies, Music, Pictures] = unchecked
 - Finder Settings -> Sidebar -> Favorites :: [AirDrop, Applications, Desktop, Documents, Downloads, Home] = checked
 - Finder Settings -> Sidebar -> Locations :: [] = unchecked
 - Finder Settings -> Sidebar -> Tags :: ['Recent Tags'] = unchecked
+
 #### View Options - use as defaults
 - View Options -> Always open in list view = checked
 - View Options -> Browse in list view = checked
@@ -479,33 +480,26 @@ Allow in the Background
 
 #### Music
 Open Music, make sure computer is authorized, and set Library sync options.
-
 - Settings -> General -> Use Listening History = unchecked
 - Settings -> General -> Notifications -> When song changes = unchecked
-
 - Settings -> Playback -> Audio Quality -> Lossless Audio = checked
 - Settings -> Playback -> Audio Quality -> Streaming = Lossless
 - Settings -> Playback -> Audio Quality -> Download = Lossless
-
 - Settings -> Advanced -> Add songs to Library when adding to playlists = unchecked
 
 #### Photos
 Open Photos and make sure iCloud sync options are correct.
-
 - Settings -> General -> Memories -> Show Featured Content = unchecked
 - Settings -> General -> Memories -> Show Memories Notification = unchecked
-
 - Settings -> Shared Library -> Shared Library Suggestions = unchecked
 
 #### Safari
 - Settings -> General -> Remove history items = Manually
 - Settings -> General -> Remove download list items = When Safari quits
 - Settings -> General -> Open "safe" files after downloading = unchecked
-
 - Settings -> AutoFill -> AutoFill web forms :: [] = checked
 - Settings -> Privacy -> Apple Pay and Apple Card -> Allow websites to check for Apple Pay and Apple Card = unchecked
 - Settings -> Privacy -> Web Advertising -> Allow privacy-preserving measurement of ad effectiveness = unchecked
-
 - Settings -> Advanced -> Smart Search Field -> Show full website address = checked
 - Settings -> Advanced -> Show Develop menu in menu bar = checked
 
@@ -522,9 +516,22 @@ Open 1Password, sign in, and set up sync using details from iPhone.
 - Settings -> Appearance -> Always Show in Sidebar :: [Categories, Tags] = checked
 - Settings -> Advanced -> Show debugging tools = checked
 - Settings -> Developer -> Command-Line Interface -> Connect with 1Password CLI = checked
-
 ##### CLI Integration
+- 1Password -> Install 1Password CLI...
+  - Install following [Get started with 1Password CLI](https://developer.1password.com/docs/cli/get-started/#install)
+```bash
+op signin
+```
 ###### Github
+- [Use 1Password to securely authenticate the GitHub CLI](https://developer.1password.com/docs/cli/shell-plugins/github)
+```bash
+op plugin init gh
+```
+- Select an existing item
+  - _select existing GitHub Login from 1Password_
+- Set default credential scope -> Use as global default on my system
+- Source the plugins.sh file
+  - plugin.sh should already be sourced in Dotfiles `.bash_profile`
 
 #### Adobe Creative Cloud
 Open 1Password, sign in, and set up sync.
@@ -535,7 +542,6 @@ Apps to install:
 - InDesign
 - Premiere Pro
 - Lightroom Classic
-
 
 #### Docker
 Open and 'Use recommended settings' to complete installation.
@@ -558,19 +564,15 @@ Open app and do not import and setting or set as default browser.
 Open app and do not import and setting or set as default browser. Do not send usage statistics.
 
 #### iTerm
-
 - iTerm2 -> Make iTerm2 Default Term
 - iTerm2 -> Install Shell Integration
-
 - Preferences -> Profiles :: {import profile}
 - Preferences -> Keys -> Hotkey :: Show/hide all windows with a... = checked
 - Preferences -> Keys -> Hotkey :: Hotkey = ^`
 
 #### JetBrains Toolbox
 Open app and do not send usage statistics.
-
-- Setting -> Login 
-
+- Settings -> Login
 Apps to install:
 - GoLand
 - PyCharm Professional Edition
@@ -586,15 +588,12 @@ Apps to install:
 Open app and grant system permissions.
 
 #### Textmate
-- Settings -> Files -> With no open documents -> Create one at startup = unchecked 
-
+- Settings -> Files -> With no open documents -> Create one at startup = unchecked
 - Settings -> Projects -> File browser location -> Folders on top = checked
 - Settings -> Projects -> Show file browser on = Left side
 - Settings -> Bundles -> [] = {manually chosen}
-
 - Settings -> Software Update -> Software Update :: Ask before up... = checked
 - Settings -> Software Update -> Crash Reports :: Submit to... = unchecked
-
 - Settings -> Terminal :: Shell support = {install at default location}
 - Settings -> Terminal :: Accept rmate connections = unchecked
 
