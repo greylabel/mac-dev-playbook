@@ -15,7 +15,7 @@ homebrew_installed_packages:
   ######
 
   ### Provisioning - Ansible installed with `pip` initially.
-  # - ansible # Automate deployment, configuration, and upgrading
+  - ansible # Automate deployment, configuration, and upgrading
 
   ### Shells
   - bash  # Bourne-Again SHell, a UNIX command interpreter
@@ -69,8 +69,8 @@ homebrew_installed_packages:
   - go  # Open source programming language to build simple/reliable/efficient software
   - lua  # Powerful, lightweight programming language
   - php  # General-purpose scripting language
-  # - python  # Interpreted, interactive, object-oriented programming language
-  # - pyenv  # Python version management
+  - python  # Interpreted, interactive, object-oriented programming language
+  - pyenv  # Python version management
   - ruby  # Powerful, clean, object-oriented scripting language
   - rbenv  # Ruby version manager
   - rust  # Safe, concurrent, practical language
@@ -220,8 +220,6 @@ homebrew_uninstalled_packages: []
 
 homebrew_taps:
   - homebrew/bundle
-  - homebrew/core
-  - homebrew/cask
   - homebrew/cask-fonts
 
 homebrew_cask_accept_external_apps: true
@@ -337,6 +335,7 @@ dockitems_remove:
   - "Pages"
   - "Podcasts"
   - "Siri"
+  - "Terminal"
   - "TV"
 dockitems_persist:
   #  - name: "Finder"
