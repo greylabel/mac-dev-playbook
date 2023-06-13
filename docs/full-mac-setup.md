@@ -331,6 +331,8 @@ You will also need to install the latest npm. Install with `npm install -g npm@l
 - Screen Time = unchecked
 
 ##### General
+###### About
+- Name = {hostname}
 ###### Software Update
 - Install macOS updates = checked
 - Install application updates from the App Store = checked
@@ -542,6 +544,21 @@ Apps to install:
 - InDesign
 - Premiere Pro
 - Lightroom Classic
+
+##### Lightroom Classic
+
+Copy settings from another computer
+```bash
+~/Library/Application Support/Adobe/CameraRaw/Settings/{profile_name}
+~/Library/Application Support/Adobe/Lightroom
+```
+
+- Settings -> General -> Default Catalog -> When starting up use this catalog = Prompt me when starting Lightroom
+- Settings -> Presets -> Override global settings for specific cameras = checked
+- Settings -> Presets -> Camera -> {find a way to import}
+- Settings -> External Editing -> Edit in Adobe Photoshop 2023 -> File Format = PSD
+- Settings -> External Editing -> Edit in Adobe Photoshop 2023 -> Resolution = 600
+- Settings -> External Editing -> Additional External Editor -> Resolution = 600
 
 #### Docker
 Open and 'Use recommended settings' to complete installation.
