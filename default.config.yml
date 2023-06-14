@@ -42,6 +42,7 @@ homebrew_installed_packages:
   - screen  # Terminal multiplexer with VT100/ANSI terminal emulation
 
   ### Other tools
+  # - grc  # Colorize logfiles and command output
   # - lsd  # Clone of ls with colorful output, file type icons, and more
   - tree  # Display directories as trees (with optional color/HTML output)
   - tldr  # Simplified and community-driven man page
@@ -288,23 +289,17 @@ dotfiles_files:
   - .curlrc
   - .editorconfig
   - .exports
-  - .extra
   - .functions
-  - .gdbinit
   - .gitattributes
   - .gitconfig
   - .gitignore
   - .gvimrc
-  - .hgignore
   - .hushlogin
   - .inputrc
   - .osx
   - .screenrc
   - .tm_properties
-  - .tmux.conf
-  - .vimrc
   - .wgetrc
-  - .zshrc
 
 
 ### Mac App Store ###
