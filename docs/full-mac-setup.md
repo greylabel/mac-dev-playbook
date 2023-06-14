@@ -154,12 +154,22 @@ Create and use `~/.gitconfig.local` file for username / github token / etc.
 
   name = Grant Gaudet
   email = grant@greylabel.net
-
+  signingkey = ~/.ssh/id_ed25519.pub
+  
 [github]
 
   user = greylabel
-```
 
+[gpg]
+  format = ssh
+  
+[gpg "ssh"]
+
+  allowedSignersFile = "~/.ssh/allowed_signers"
+  
+[commit]
+  gpgsign = true
+```
 
 ### SSH
 #### Generating a new SSH key
@@ -205,6 +215,24 @@ chmod 644 ~/.ssh/config
 ```bash
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
+
+### Allowed Signers
+See: 
+- https://man7.org/linux/man-pages/man1/ssh-keygen.1.html#ALLOWED_SIGNERS
+- https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/
+
+Create or copy an existing `allowed_signers` file.
+
+```bash
+touch ~/.ssh/allowed_signers
+```
+
+Add an entry with a public key.
+
+```bash
+<you@example.com> namespaces="git" <public key>
+```
+
 
 At this point, the new key can be added to GitHub and other cloud services.
 
@@ -524,6 +552,11 @@ Open 1Password, sign in, and set up sync using details from iPhone.
 ```bash
 op signin
 ```
+###### SSH
+Import any new SSH keys into 1Password.
+Turn on the 1Password SSH Agent.
+- Settings -> Developer -> SSH Agent -> Setup SSH Agent...
+
 ###### Github
 - [Use 1Password to securely authenticate the GitHub CLI](https://developer.1password.com/docs/cli/shell-plugins/github)
 ```bash
@@ -614,8 +647,22 @@ Open app and grant system permissions.
 - Settings -> Terminal :: Shell support = {install at default location}
 - Settings -> Terminal :: Accept rmate connections = unchecked
 
+#### Tower
+- Settings -> General -> Terminal Application -> iTerm2
+- Settings -> General -> Automatically fetch remote repositories = Never (only manually)
+- Settings -> General -> Show Reflog in sidebar = checked
+- Settings -> Git Config -> Git binary = {homebrew}
+- Settings -> Git Config -> Global signing key = (greyed out) ~/.ssh/id_ed25519.pub
+- Settings -> Git Config -> Allowed signers file = ~/.ssh/allowed_signers
+- Settings -> Git Config -> Sign commits = checked
+- Settings -> Advanced -> Automatically index Git repositories = unchecked 
 
 ### Cloud Services
+#### Github
+Visit the [GitHub SSH key settings page](https://github.com/settings/ssh/new) to upload your public key as both an _Authentication Key_ and a _Signin Key_.
+
+#### Gitlab
+Visit the [User settings -> SSH Keys page](https://gitlab.com/-/profile/keys) to upload your public key with Usage type = Authentication & Signing
 
 
 ### Syncing additional assets

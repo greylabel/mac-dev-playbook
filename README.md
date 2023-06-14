@@ -8,9 +8,28 @@ Based on the [Mac Development Ansible Playbook](https://github.com/geerlingguy/m
 
 See the full from-scratch setup document [full-mac-setup.md](docs/full-mac-setup.md) for more details.
 
-### Run without the `post` tag
+Installation include the following steps.
 
-    ansible-playbook main.yml --ask-become-pass --skip-tags post
+1. Install macOS
+1. Sign in to iCloud and the App Store
+1. Install  Xcode command line tools and agree to license.
+1. Create directories for source code and websites in home folder
+1. Add `python3` to `$PATH`, update `pip`and `setuptools`, and install `ansible`
+1. Add `brew` to `$PATH` (confirm if this is needed for playbook to run)
+1. Clone or download the (this) Mac Development Ansible Playbook. 
+   1. Copy in additional config files.
+   1. Install requirements and run playbook.
+1. Create SSH key and add to SSH Agent, copy `config` setup git commit signing 
+1. Copy or symlink additional dotfiles
+1. Install non-managed software, e.g. Node
+1. Manually configure macOS, System Application, and User Application, Cloud Applications
+1. Manually copy other assets, e.g. fonts, repos, documents
+1. Clean up temporary artifacts
+
+
+### Running without a specific tag
+
+    ansible-playbook main.yml --ask-become-pass --skip-tags "post"
 
 ### Running a specific set of tagged tasks
 
@@ -22,8 +41,8 @@ You can filter which part of the provisioning process to run by specifying a set
 
 You can use this playbook to manage other Macs as well; the playbook doesn't even need to be run from a Mac at all! If you want to manage a remote Mac, either another Mac on your network, or a hosted Mac like the ones from [MacStadium](https://www.macstadium.com), you just need to make sure you can connect to it with SSH:
 
-1. (On the Mac you want to connect to:) Go to System Preferences > Sharing.
-2. Enable 'Remote Login'.
+Enable _Remote Login_ on the Mac you want to connect to:
+- System Settings -> General -> Sharing -> Remote Login = On
 
 > You can also enable remote login on the command line:
 >
