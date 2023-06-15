@@ -2,3 +2,4 @@
 *.retry
 roles*
 config.yml
+NOTES.md
