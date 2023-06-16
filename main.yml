@@ -11,6 +11,14 @@
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
+    - name: Run pre-provision pre_task files in a block.
+      tags: [ 'pre' ]
+      block:
+        - name: Run configured pre-provision ansible pre_task files.
+          include_tasks: "{{ outer_item }}"
+          loop_control:
+            loop_var: outer_item
+          with_fileglob: "{{ pre_provision_tasks | default(omit) }}"
 
   roles:
     - role: elliotweiser.osx-command-line-tools
@@ -28,14 +36,6 @@
       tags: ['dock']
 
   tasks:
-    - name: Run pre-provision task files in a block.
-      tags: [ 'pre' ]
-      block:
-        - name: Run configured pre-provision ansible task files.
-          include_tasks: "{{ outer_item }}"
-          loop_control:
-            loop_var: outer_item
-          with_fileglob: "{{ pre_provision_tasks | default(omit) }}"
     - name: Install additional packages.
       import_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']

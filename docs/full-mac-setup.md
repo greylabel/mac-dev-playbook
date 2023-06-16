@@ -4,7 +4,11 @@ This document describes the full process of setting up a fresh macOS installatio
 
 ## macOS setup
 ### macOS
-First and foremost, macOS needs to be installed. Then, complete Apple's mandatory macOS setup wizard, creating a local user account
+
+> See: [Create a bootable installer for macOS
+](https://support.apple.com/en-us/HT201372)
+
+First and foremost, macOS needs to be installed.  Then, complete Apple's mandatory macOS setup wizard, creating a local admin user account.
 
 > @TODO: Document macOS setup wizard steps.
 
@@ -84,9 +88,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
 
 ### Allowed Signers
-See:
-- https://man7.org/linux/man-pages/man1/ssh-keygen.1.html#ALLOWED_SIGNERS
-- https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/
+> See: https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/
 
 Create or copy an existing `allowed_signers` file.
 
@@ -97,7 +99,7 @@ touch ~/.ssh/allowed_signers
 Add an entry with a public key.
 
 ```bash
-grant@greylabel.net namespaces="git" <~/.ssh/id_ed25519.pub>
+grant@greylabel.net namespaces="git" <public_key>
 ```
 
 #### Adding a passphrase to an existing SSH key
@@ -135,12 +137,12 @@ Install applications that cannot be installed by Homebrew, through the App Store
 ### Get the playbook
 Clone or download (this) [mac-dev-playbook](https://github.com/greylabel/mac-dev-playbook) git repo to a temporary location, or wherever you prefer to store source code checkouts, e.g. `~/Projects`.
 
-##### Clone the repo with Git
+#### Clone with Git
 ```bash
 git clone https://github.com/greylabel/mac-dev-playbook.git
 ```
 
-##### Download the repo as a zip file
+#### Download as a zip file
 ```bash
 curl -LJO https://github.com/greylabel/mac-dev-playbook/archive/refs/heads/main.zip
 ```
@@ -168,10 +170,10 @@ ansible-playbook main.yml --ask-become-pass --skip-tags post
 > @TODO: Note about `post` and `never`.
 
 
-### Pre-provision tasks
+#### Pre-provision pre_tasks
 
-#### Directories for source code
-Create directories for Projects and Sites. These directories will be used later in the process and are not created by default. They generally will contain code and websites, respectively.
+##### Directories for source code
+Create directories for Projects and Sites. These directories will be used later in the process and are not present by default in macOS. They generally will contain source code and websites, respectively.
 ```bash
 mkdir ~/Projects 
 chmod u+rwx,go-rwx ~/Projects
@@ -181,7 +183,7 @@ mkdir ~/Sites
 chmod u+rwx,go-rwx ~/Sites
 ```
 
-#### User specific Git config
+##### User specific Git config
 Create and use `~/.gitconfig.local` file for username / github token / etc.
 
 ```
@@ -197,9 +199,11 @@ Create and use `~/.gitconfig.local` file for username / github token / etc.
 
 ```
 
-### Command line tools
+#### Roles
 
-### Homebrew
+##### Command line tools
+
+##### Homebrew
 Homebrew is installed by Ansible when the main playbook is run. For reference, the official command to install Homebrew with `curl` is below.
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -218,18 +222,25 @@ export PATH="/opt/homebrew/bin:$PATH"
 > @TODO: Consider using [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) to manage package list and apps with a Brewfile, and potentially move back to Dotfiles repo.
 
 
-### Dotfiles
+#### Dotfiles
 Dotfiles can be installed by Ansible when the main playbook is run. My [Dotfiles](https://github.com/greylabel/dotfiles/tree/main) include configuration for many of the packages installed by Homebrew, as well as an assortment of other tools and aliases.
 
 > Note: macOS scriptable settings are stored in the Dotfiles repo, as is custom with other dotfiles setups around the web, but can be applied by Ansible when the main playbook is run.
 
+##### Mac App Store
 
+##### Dock
 
+#### Tasks
 
-### Post-provision tasks
+##### osx
+
+##### extra-packages
+
+##### Post-provision tasks
 > @TODO: Note about this is where tasks that are not idempotent live.
 
-#### ACLs for Projects and Sites
+###### ACLs for Projects and Sites
 Set ACLs for Projects and Sites to prevent accidental deletion.
 ```bash 
 chmod +a "group:everyone deny delete" ~/Projects
@@ -238,7 +249,7 @@ chmod +a "group:everyone deny delete" ~/Projects
 chmod +a "group:everyone deny delete" ~/Sites
 ```
 
-#### Activate utils installed by Homebrew
+###### Activate utils installed by Homebrew
 
 > @TODO: Turn into a `post` task
 
