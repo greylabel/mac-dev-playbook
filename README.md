@@ -10,20 +10,29 @@ See the full from-scratch setup document [full-mac-setup.md](docs/full-mac-setup
 
 Installation include the following steps.
 
+#### macOS install and initiation setup
 1. Install macOS
 1. Sign in to iCloud and the App Store
 1. Install  Xcode command line tools and agree to license.
-1. Create directories for source code and websites in home folder
+
+#### Python and Ansible
 1. Add `python3` to `$PATH`, update `pip`and `setuptools`, and install `ansible`
 1. Add `brew` to `$PATH` (confirm if this is needed for playbook to run)
 1. Clone or download the (this) Mac Development Ansible Playbook. 
    1. Copy in additional config files.
    1. Install requirements and run playbook.
-1. Create SSH key and add to SSH Agent, copy `config` setup git commit signing 
-1. Copy or symlink additional dotfiles
-1. Install non-managed software, e.g. Node
+
+#### Playbook
+1. Create directories for source code and websites in home folder
+1. [A] Create SSH key and add to SSH Agent, copy `config` setup git commit signing 
+1. [A] Copy or symlink additional dotfiles
+1. [A - post] Install non-managed software, e.g. Node
+1. [A - post] Manually copy other assets, e.g. fonts, repos, documents
+
+#### Manual configuration
 1. Manually configure macOS, System Application, and User Application, Cloud Applications
-1. Manually copy other assets, e.g. fonts, repos, documents
+
+#### Cleanup
 1. Clean up temporary artifacts
 
 

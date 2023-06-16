@@ -1,0 +1,6 @@
+- name: Create "{{ item }}" directory if it does not exist
+  ansible.builtin.file:
+    path: "~/{{ item }}"
+    state: directory
+    mode: '700'
+  loop: "{{ home_dirs_code }}"

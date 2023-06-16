@@ -420,6 +420,13 @@ pip_packages: []
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
 
+# Create home directories for code and websites, and prevent accidental deletion.
+home_dirs_code:
+ - Projects
+ - Sites
+
+# Glob pattern to ansible task files to run before all other tasks are started.
+pre_provision_tasks: [tasks/pre-provision.yml]
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: []
+post_provision_tasks: [tasks/post-provision.yml]
