@@ -241,7 +241,7 @@ homebrew_cask_apps:
   - figma  # Collaborative team software
   - firefox  # Web browser
   - handbrake  # Open-source video transcoder available for Linux, Mac, and Windows
-  # - garmin-express  # Update maps and software, sync with Garmin Connect and register your device
+  - garmin-express  # Update maps and software, sync with Garmin Connect and register your device
   - google-chrome  # Web browser
   - iterm2  # Terminal emulator as alternative to Apple's Terminal app
   - jetbrains-toolbox  # JetBrains Toolbox

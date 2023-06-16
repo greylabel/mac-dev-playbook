@@ -48,16 +48,16 @@ export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
 Create directory for SSH keys and configuration and set permissions.
 ```bash
 mkdir ~/.ssh
-chmod u+rwx,go-rwx ~/.ssh
 chmod 0700 ~/.ssh
 ```
 Generate a new SSH key.
 ```bash
 ssh-keygen -t ed25519 -C "grant@greylabel.net"
-# chmod u+rw,go-rwx ~/.ssh/*
 chmod 600 ~/.ssh/id_ed25519
 chmod 644 ~/.ssh/id_ed25519.pub
 ```
+
+At this point, the new key can be added to GitHub and other cloud services.
 
 #### Adding your SSH key to the ssh-agent
 ```bash
@@ -77,7 +77,6 @@ Host *
 Set permissions on the `~/.ssh/config` file.
 ```bash
 chmod 644 ~/.ssh/config
-# chmod u+rw,go-rwx ~/.ssh/config
 ```
 
 ```bash
@@ -98,10 +97,8 @@ touch ~/.ssh/allowed_signers
 Add an entry with a public key.
 
 ```bash
-<you@example.com> namespaces="git" <public key>
+grant@greylabel.net namespaces="git" <~/.ssh/id_ed25519.pub>
 ```
-
-At this point, the new key can be added to GitHub and other cloud services.
 
 #### Adding a passphrase to an existing SSH key
 
@@ -130,6 +127,9 @@ Add Python 3 to `PATH` environment variable.
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 ```
 > _If desired, Ansible and Python 3 can be (re)installed by Homebrew when the main playbook is run, and thus managed by `brew` going forward._
+
+## Other manually installed items
+Install applications that cannot be installed by Homebrew, through the App Store, or via another easy and Ansible-friendly scriptable process. This is done before the main playbook is run to ensure apps are in place for tasks that depend on their presence, like configuring the Dock.
 
 ## Mac Development Ansible Playbook
 ### Get the playbook
@@ -257,19 +257,21 @@ fi;
 ```
 
 
-## Manual App installation
+## Manual App configuration
 
 See [Manual macOS and Application Configuration](manual-macos-and-app-config.md) for detailed configuration guide.
 
 
-
-
 ## Syncing additional assets
+
 #### Fonts
 Sync fonts from Dropbox or another location.
 ```bash
 cp -R ~/Dropbox/Apps/Config/Fonts/* ~/Library/Fonts/
 ```
+
+#### Source code and websites
 > Optionally, copy contents of `~/Projects` and/or `~/Sites` folder(s) from another Mac (to save time).
 
 ## Cleanup
+Remove or move this repo.

@@ -1,9 +1,6 @@
 # Automated Installation
 
-Install applications that cannot be installed by Homebrew, through the App Store, or via another easy and Ansible-friendly scriptable process. This is done before the main playbook is run to ensure apps are in place for tasks that depend on their presence, like configuring the Dock.
-
-
-> @TODO: Sync with default.config.yml
+> See `defaults.config.yml` for actual installation list.
 
 ### Homebrew Cask
 * [1Password](https://agilebits.com/downloads)
