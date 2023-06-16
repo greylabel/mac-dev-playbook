@@ -422,8 +422,8 @@ pip_packages: []
 
 # Create home directories for code and websites, and prevent accidental deletion.
 home_dirs_code:
- - Projects
- - Sites
+  - Projects
+  - Sites
 
 # Glob pattern to ansible task files to run before all other tasks are started.
 pre_provision_tasks: [tasks/pre-provision.yml]

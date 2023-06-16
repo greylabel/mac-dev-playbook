@@ -12,7 +12,7 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
     - name: Run pre-provision pre_task files in a block.
-      tags: [ 'pre' ]
+      tags: ['pre']
       block:
         - name: Run configured pre-provision ansible pre_task files.
           include_tasks: "{{ outer_item }}"

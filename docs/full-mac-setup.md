@@ -282,7 +282,7 @@ cp -R ~/Dropbox/Apps/Config/Fonts/* ~/Library/Fonts/
 ```
 
 #### Source code and websites
-> Optionally, copy contents of `~/Projects` and/or `~/Sites` folder(s) from another Mac (to save time).
+Optionally, copy contents of `~/Projects` and/or `~/Sites` folder(s) from another Mac (to save time).
 
 ## Cleanup
 Remove or move this repo.
