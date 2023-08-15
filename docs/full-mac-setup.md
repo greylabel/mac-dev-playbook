@@ -63,11 +63,6 @@ chmod 644 ~/.ssh/id_ed25519.pub
 
 At this point, the new key can be added to GitHub and other cloud services.
 
-#### Adding your SSH key to the ssh-agent
-```bash
-eval "$(ssh-agent -s)"
-```
-
 Modify the `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
 ```bash
 IgnoreUnknown AddKeysToAgent,UseKeychain
@@ -83,6 +78,11 @@ Set permissions on the `~/.ssh/config` file.
 chmod 644 ~/.ssh/config
 ```
 
+#### Adding your SSH key to the ssh-agent
+```bash
+eval "$(ssh-agent -s)"
+```
+
 ```bash
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
@@ -94,6 +94,11 @@ Create or copy an existing `allowed_signers` file.
 
 ```bash
 touch ~/.ssh/allowed_signers
+```
+
+Set permissions on the `~/.ssh/allowed_signers` file.
+```bash
+chmod 644 ~/.ssh/allowed_signers
 ```
 
 Add an entry with a public key.
