@@ -107,12 +107,18 @@ Add/replace the passphrase for an existing private key without regenerating the 
 ssh-keygen -p -f ~/.ssh/id_ed25519
 ```
 
-
 ## Install Python and Ansible
-Ensure Python 3 is installed, and upgrade `pip` and `setuptools` packages.
+Ensure Python 3 is installed and note the version.
+
 ```bash
-pip3 install --upgrade setuptools
+which python3 && python3 --version
+```
+
+Upgrade essential packages. Note that running `pip3` without `sudo` with default to a user installation in `~/Library/Python/`.
+
+```bash
 pip3 install --upgrade pip
+pip3 install --upgrade setuptools
 pip3 install --upgrade virtualenv
 pip3 install --upgrade ipython
 ```
@@ -126,6 +132,12 @@ Add Python 3 to `PATH` environment variable.
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 ```
 > _If desired, Ansible and Python 3 can be (re)installed by Homebrew when the main playbook is run, and thus managed by `brew` going forward._
+
+### $PATH
+> @TODO: Does brew need to be in `$PATH` for ansible to install its packages?
+```bash
+export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
+```
 
 ## Other manually installed items
 Install applications that cannot be installed by Homebrew, through the App Store, or via another easy and Ansible-friendly scriptable process. This is done before the main playbook is run to ensure apps are in place for tasks that depend on their presence, like configuring the Dock.
@@ -282,4 +294,4 @@ cp -R ~/Dropbox/Apps/Config/Fonts/* ~/Library/Fonts/
 Optionally, copy contents of `~/Projects` and/or `~/Sites` folder(s) from another Mac (to save time).
 
 ## Cleanup
-Remove or move this repo.
+Remove or move this repo from its temporary location.
