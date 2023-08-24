@@ -24,6 +24,7 @@ homebrew_installed_packages:
   # - fish  # User-friendly command-line shell for UNIX-like operating systems
   - shellcheck  # Static analysis and lint tool, for (ba)sh scripts
   # - zsh-completions  # Additional completion definitions for zsh
+  - tmux  # Terminal multiplexer
 
   # GNU utils / updated version of OS X tools
   # - autoconf  # Automatic configure script builder
