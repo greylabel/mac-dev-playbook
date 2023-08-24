@@ -233,9 +233,12 @@ homebrew_cask_apps:
   - 1password/tap/1password-cli  # Command-line interface for 1Password
   - adobe-creative-cloud  # Collection of apps and services for photography, design, video, web, and UX
   # - airfoil  # Sends audio from computer to outputs
+  - arduino-ide  # Electronics prototyping platform
   - backblaze  # Data backup and storage service
+  - billings-pro  # Invoices, estimates, quotes and time-tracking
   - chromedriver  # Automated testing of webapps for Google Chrome
   # - cyberduck  # Server and cloud storage browser
+  - discord  # Voice and text chat software
   - docker  # App to build and share containerized applications and microservice
   - doxie  # Companion app for scanner hardware
   - dropbox  # Client for the Dropbox cloud storage service
@@ -248,6 +251,7 @@ homebrew_cask_apps:
   - jetbrains-toolbox  # JetBrains Toolbox
   # - kaleidoscope  # Spot and merge differences in text and image files or folders
   # - keep-it  # Notebook, scrapbook and organiser tool
+  - linear-linear  # App to manage software development and track bugs
   # - nano  # Free (GNU) replacement for the Pico text editor
   - netnewswire  # Free and open-source RSS reader
   - notion  # App to write, plan, collaborate, and get organized
