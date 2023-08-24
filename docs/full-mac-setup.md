@@ -10,12 +10,10 @@ This document describes the full process of setting up a fresh macOS installatio
 
 First and foremost, macOS needs to be installed.  Then, complete Apple's mandatory macOS setup wizard, creating a local admin user account.
 
-> @TODO: Document macOS setup wizard steps.
-
 ### iCloud and App Store
 Sign in to iCloud and the App Store.
 
-#### Software Update
+### Software Update
 Install any available macOS updates.
 
 ### Xcode
@@ -25,22 +23,16 @@ Install Xcode command line tools.
 xcode-select --install
 ```
 
-Agree To Xcode.
+Agree To Xcode (only with a full Xcode installation).
 
 ```bash
 sudo xcrun cc
 ```
 
 ### Rosetta
-Install Rosetta.
+Install Rosetta (Apple Silicone only).
 ```bash
 softwareupdate --install-rosetta --agree-to-license
-```
-
-### $PATH
-> @TODO: Does brew need to be in `$PATH` for ansible to install its packages?
-```bash
-export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
 ```
 
 ### SSH
