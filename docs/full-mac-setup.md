@@ -30,7 +30,7 @@ sudo xcrun cc
 ```
 
 ### Rosetta
-Install Rosetta (Apple Silicone only).
+Install Rosetta (Apple silicon only).
 ```bash
 softwareupdate --install-rosetta --agree-to-license
 ```

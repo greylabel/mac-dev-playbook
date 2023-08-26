@@ -364,6 +364,9 @@ Open app and do not send usage statistics.
 #### Rectangle
 Open app and grant system permissions.
 
+Launch on login
+Check for updates automatically
+
 #### Textmate
 - Settings -> Files -> With no open documents -> Create one at startup = unchecked
 - Settings -> Projects -> File browser location -> Folders on top = checked
