@@ -1,6 +1,48 @@
 
 ## macOS config
 
+### macOS Set Up Wizard
+
+#### Select Your Country or Region
+United States
+#### Accessibility
+Not Now
+#### Select Your Wi-Fi Network
+#### Data & Privacy
+#### Migration Assistant
+Not Now
+#### Sign In with Your Apple ID
+Set Up Later
+#### Terms and Conditions
+Agree
+#### Create a Computer Account
+Full name:
+
+Account name:
+
+Password:
+
+Hint:
+#### Enable Location Services
+Enable Location Services on this Mac = unchecked
+#### Select Your Time Zone
+Set time zone automatically using current location = unchecked
+
+Closest City:
+#### Analytics
+Share Mac Analytics with Apple = unchecked
+
+Share crash data with app developers = unchecked
+#### Screen Time
+Set Up Later
+#### Enable Siri
+Enable Ask Siri = unchecked
+#### Touch ID
+#### Choose Your Look
+Auto
+
+
+
 ### Manual macOS config
 
 #### System Preferences
