@@ -14,7 +14,7 @@ First and foremost, macOS needs to be installed.  Then, complete Apple's mandato
 Sign in to iCloud and the App Store.
 
 ### Software Update
-Install any available macOS updates.
+Install any available macOS and App Store updates.
 
 ### Xcode
 Install Xcode command line tools.
