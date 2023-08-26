@@ -1,0 +1,9 @@
+---
+- name: Create .ssh directory if it does not exist
+  ansible.builtin.file:
+    path: "~/.ssh"
+    state: directory
+    mode: '700'
+- name: Generate a new SSH key if not present.
+- name: Copy .ssh/config if not present.
+- name: Create allowed_signers file if not present.
