@@ -43,19 +43,29 @@ softwareupdate --install-rosetta --agree-to-license
 
 Create directory for SSH keys and configuration and set permissions.
 ```bash
-mkdir ~/.ssh
-chmod 0700 ~/.ssh
+mkdir ~/.ssh && chmod 0700 ~/.ssh
 ```
 Generate a new SSH key.
 ```bash
 ssh-keygen -t ed25519 -C "grant@greylabel.net"
-chmod 600 ~/.ssh/id_ed25519
-chmod 644 ~/.ssh/id_ed25519.pub
+```
+
+```bash
+chmod 600 ~/.ssh/id_ed25519 && chmod 644 ~/.ssh/id_ed25519.pub
 ```
 
 At this point, the new key can be added to GitHub and other cloud services.
 
+#### SSH Configuration
+
+Create and set permissions on the `~/.ssh/config` file.
+
+```bash
+touch ~/.ssh/config && chmod 644 ~/.ssh/config
+```
+
 Modify the `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+
 ```bash
 IgnoreUnknown AddKeysToAgent,UseKeychain
 
@@ -63,11 +73,6 @@ Host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
-```
-
-Set permissions on the `~/.ssh/config` file.
-```bash
-chmod 644 ~/.ssh/config
 ```
 
 #### Adding your SSH key to the ssh-agent
@@ -82,15 +87,10 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ### Allowed Signers
 > See: https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/
 
-Create or copy an existing `allowed_signers` file.
+Create and set permissions on the `allowed_signers` file.
 
 ```bash
-touch ~/.ssh/allowed_signers
-```
-
-Set permissions on the `~/.ssh/allowed_signers` file.
-```bash
-chmod 644 ~/.ssh/allowed_signers
+touch ~/.ssh/allowed_signers && chmod 644 ~/.ssh/allowed_signers
 ```
 
 Add an entry with a public key.
@@ -117,12 +117,10 @@ which python3 && python3 --version
 Upgrade essential packages. Note that running `pip3` without `sudo` with default to a user installation in `~/Library/Python/`.
 
 ```bash
-pip3 install --upgrade pip
-pip3 install --upgrade setuptools
-pip3 install --upgrade virtualenv
-pip3 install --upgrade ipython
+pip3 install --upgrade pip setuptools virtualenv ipython
 ```
-- Install Ansible with `pip` for the current user.
+
+Install Ansible with `pip` for the current user.
 ```bash
 pip3 install --upgrade ansible
 ```
@@ -148,6 +146,8 @@ Clone or download (this) [mac-dev-playbook](https://github.com/greylabel/mac-dev
 
 #### Clone with Git
 ```bash
+git clone git@github.com:greylabel/mac-dev-playbook.git
+
 git clone https://github.com/greylabel/mac-dev-playbook.git
 ```
 
