@@ -438,5 +438,4 @@ pre_provision_tasks:
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks:
-  - tasks/pre-provision.yml
-  - tasks/home-dirs-pre.yml
+  - tasks/post-provision.yml
