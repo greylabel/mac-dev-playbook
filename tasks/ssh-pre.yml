@@ -5,5 +5,17 @@
     state: directory
     mode: '700'
 - name: Generate a new SSH key if not present.
+  community.crypto.openssh_keypair:
+    type: ed25519
+    path: ~/.ssh/id_ed25519
+    passphrase: super_secret_password
+    comment: 'user@example.com'
 - name: Copy .ssh/config if not present.
+  ansible.builtin.copy:
+  src: init/ssh_config
+  dest: ~/.ssh/config
+  mode: '0644'
 - name: Create allowed_signers file if not present.
+  ansible.builtin.file:
+    path: "~/.ssh/allowed_signers"
+    mode: '644'
