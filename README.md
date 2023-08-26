@@ -8,32 +8,41 @@ Based on the [Mac Development Ansible Playbook](https://github.com/geerlingguy/m
 
 See the full from-scratch setup document [full-mac-setup.md](docs/full-mac-setup.md) for more details.
 
-Installation include the following steps.
+Setup goes through the following automated [A] and manual [M] steps.
 
 #### macOS install and initiation setup
-1. Install macOS
-1. Sign in to iCloud and the App Store
-1. Install  Xcode command line tools and agree to license.
+1. [M] Install macOS
+1. [M] Sign in to iCloud and the App Store
+1. [M] Install Xcode command line tools and agree to license
+1. [M] Install Rosetta
+1. [M] Create directories for source code and websites in home folder
+1. [M] Create SSH key and add to SSH Agent, copy `config` setup git commit signing
+1. [M] Copy or symlink additional dotfiles
+1. [M] Install non-managed software, e.g. Node
+
 
 #### Python and Ansible
-1. Add `python3` to `$PATH`, update `pip`and `setuptools`, and install `ansible`
-1. Add `brew` to `$PATH` (confirm if this is needed for playbook to run)
-1. Clone or download the (this) Mac Development Ansible Playbook. 
-   1. Copy in additional config files.
-   1. Install requirements and run playbook.
+1. [M] Add `python3` to `$PATH`, update `pip`and `setuptools`, and install `ansible`
+1. [M] Add `brew` to `$PATH` (confirm if this is needed for playbook to run)
+1. [M] Clone or download the (this) Mac Development Ansible Playbook. 
+   1. [M] Copy in additional config files.
+   1. [M] Install requirements and run playbook.
 
-#### Playbook
-1. Create directories for source code and websites in home folder
-1. [A] Create SSH key and add to SSH Agent, copy `config` setup git commit signing 
-1. [A] Copy or symlink additional dotfiles
-1. [A - post] Install non-managed software, e.g. Node
-1. [A - post] Manually copy other assets, e.g. fonts, repos, documents
+#### Ansible playbook
+1. Ensure OS X Command Line Tools are installed
+2. Install packages and apps with Homebrew
+3. Install and symlink dotfiles
+4. Install apps from the Mac App Store
+5. Configure macOS Dock
+6. Install packages from other package managers, e.g. composer, pip
+7. Configure masOS
 
 #### Manual configuration
-1. Manually configure macOS, System Application, and User Application, Cloud Applications
+1. [M] Manually configure macOS, System Application, and User Application, Cloud Applications
+1. [M] Manually copy other assets, e.g. fonts, repos, documents
 
 #### Cleanup
-1. Clean up temporary artifacts
+1. [M]Clean up temporary artifacts
 
 
 ### Running without a specific tag
