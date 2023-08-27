@@ -18,9 +18,8 @@ Setup goes through the following automated [A] and manual [M] steps.
 
 #### Python and Ansible
 1. [M] Add `python3` to `$PATH`, update packages, and install `ansible`
-1. [M] Add `brew` to `$PATH` (confirm if this is needed for playbook to run)
 1. [M] Clone or download the (this) Mac Development Ansible Playbook. 
-   1. [M] Copy in additional config files.
+   1. [M] Copy in additional config files and vaults.
    1. [M] Install requirements and run playbook.
 
 #### Ansible playbook
