@@ -25,7 +25,7 @@ Setup goes through the following automated [A] and manual [M] steps.
 #### Ansible playbook
 1. [A] Ensure OS X Command Line Tools are installed
 1. [A] Create home directories for source code and websites
-1. [M] Create SSH key and config, add key to SSH Agent, setup git commit signing
+1. [A] Create SSH key and config, add key to SSH Agent, setup git commit signing
 2. [A] Install packages and apps with Homebrew
 3. [A] Install and symlink dotfiles
 4. [A] Install apps from the Mac App Store
