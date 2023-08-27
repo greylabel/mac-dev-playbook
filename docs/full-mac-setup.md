@@ -37,7 +37,6 @@ softwareupdate --install-rosetta --agree-to-license
 
 ### SSH
 #### Generating a new SSH key
-> @TODO: Investigate if this can be automated with Ansible and implications on remote Mac provisioning.
 
 > See Github's [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) for more information.
 
@@ -117,16 +116,16 @@ which python3 && python3 --version
 Upgrade essential packages. Note that running `pip3` without `sudo` with default to a user installation in `~/Library/Python/`.
 
 ```bash
-pip3 install --upgrade pip setuptools virtualenv ipython
+python3 -m pip install --user --upgrade pip setuptools virtualenv ipython
 ```
 
 ```bash
-python3 -m pip install bcrypt
+python3 -m pip install --user bcrypt
 ```
 
 Install Ansible with `pip` for the current user.
 ```bash
-pip3 install --upgrade ansible
+python3 -m pip install --user ansible
 ```
 Add Python 3 to `PATH` environment variable.
 > Note that the locations of Python 3 binaries and libraries may be different depending on the version of Python installed. The following example assumes Python 3.9. The actual path can be determined by running `which python3` and `python3 -m site --user-base` in the terminal and adjusting the below accordingly.
@@ -232,8 +231,6 @@ Homebrew is installed by Ansible when the main playbook is run. For reference, t
 ```
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
-
-> @TODO: Do we need `brew` in `$PATH` at here?
 
 Add Homebrew's `bin` directory to `PATH` environment variable, if needed for temporary use. This will be properly persisted when Dotfiles are installed later.
 
