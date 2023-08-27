@@ -48,7 +48,7 @@ Setup goes through the following automated [A] and manual [M] steps.
 
 ### Running a specific set of tagged tasks
 
-You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag. The tags available are `dotfiles`, `homebrew`, `mas`, `extra-packages` and `osx`.
+You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag. The tags available are `pre`, `post`, `dotfiles`, `homebrew`, `mas`, `extra-packages` and `osx`.
 
     ansible-playbook main.yml -K --tags "dotfiles,homebrew"
 
