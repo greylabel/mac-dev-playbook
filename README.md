@@ -15,9 +15,6 @@ Setup goes through the following automated [A] and manual [M] steps.
 1. [M] Sign in to iCloud and the App Store and run software update
 1. [M] Install Xcode command line tools and agree to license
 1. [M] Install Rosetta (Apple silicon)
-1. [M] Create home directories for source code and websites
-1. [M] Create SSH key and config, add key to SSH Agent, setup git commit signing
-
 
 #### Python and Ansible
 1. [M] Add `python3` to `$PATH`, update packages, and install `ansible`
@@ -28,6 +25,8 @@ Setup goes through the following automated [A] and manual [M] steps.
 
 #### Ansible playbook
 1. [A] Ensure OS X Command Line Tools are installed
+1. [A] Create home directories for source code and websites
+1. [M] Create SSH key and config, add key to SSH Agent, setup git commit signing
 2. [A] Install packages and apps with Homebrew
 3. [A] Install and symlink dotfiles
 4. [A] Install apps from the Mac App Store

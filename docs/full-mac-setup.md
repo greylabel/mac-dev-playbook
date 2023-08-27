@@ -196,6 +196,15 @@ mkdir ~/Sites
 chmod u+rwx,go-rwx ~/Sites
 ```
 
+###### ACLs for Projects and Sites
+Set ACLs for Projects and Sites to prevent accidental deletion.
+```bash 
+chmod +a "group:everyone deny delete" ~/Projects
+```
+```bash
+chmod +a "group:everyone deny delete" ~/Sites
+```
+
 ##### User specific Git config
 Create and use `~/.gitconfig.local` file for username / github token / etc.
 
@@ -253,14 +262,7 @@ Dotfiles can be installed by Ansible when the main playbook is run. My [Dotfiles
 ##### Post-provision tasks
 > @TODO: Note about this is where tasks that are not idempotent live.
 
-###### ACLs for Projects and Sites
-Set ACLs for Projects and Sites to prevent accidental deletion.
-```bash 
-chmod +a "group:everyone deny delete" ~/Projects
-```
-```bash
-chmod +a "group:everyone deny delete" ~/Sites
-```
+
 
 ###### Activate utils installed by Homebrew
 
