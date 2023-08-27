@@ -3,4 +3,3 @@
   shell: |
     eval "$(ssh-agent)"
     ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-- name: Add public key to allowed_signers
