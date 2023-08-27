@@ -431,10 +431,16 @@ home_dirs_code:
   - Projects
   - Sites
 
+
+ssh_allowed_signers_email: 'grant@greylabel.net'
+
+
 # Glob pattern to ansible task files to run before all other tasks are started.
 pre_provision_tasks:
   - tasks/pre-provision.yml
   - tasks/home-dirs-pre.yml
+  - tasks/ssh-pre.yml
+  - tasks/git-pre.yml
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks:
