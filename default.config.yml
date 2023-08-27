@@ -266,6 +266,7 @@ homebrew_cask_apps:
   # - virtualbox  # Virtualizer for x86 hardware
   - visual-studio-code  # Microsoft Visual Studio Code
   - vlc  # Multimedia player
+  # - warp  # Rust-based terminal
   - wireshark  # Graphical network analyzer and capture tool
 
   ### Cask Fonts

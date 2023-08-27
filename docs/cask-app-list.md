@@ -51,6 +51,7 @@
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * [Visual Studio Code](https://code.visualstudio.com)
 * [VLC](https://www.videolan.org/vlc/download-macosx.html)
+* [Warp](https://www.warp.dev)
 * [Wireshark](https://www.wireshark.org/download.html)
 
 #### Mac App Store
