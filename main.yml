@@ -22,6 +22,7 @@
 
   roles:
     - role: elliotweiser.osx-command-line-tools
+      tags: ['always']
     - role: geerlingguy.mac.homebrew
       when: configure_homebrew
       tags: ['homebrew']
