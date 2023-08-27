@@ -1,21 +1,21 @@
 ---
 - name: Create .ssh directory if it does not exist
   ansible.builtin.file:
-    path: "~/.ssh"
+    path: ~/.ssh
     state: directory
     mode: '700'
-- name: Generate a new SSH key if not present.
+- name: Generate a new SSH key if not present
   community.crypto.openssh_keypair:
     type: ed25519
     path: ~/.ssh/id_ed25519
-    passphrase: super_secret_password
-    comment: 'user@example.com'
-- name: Copy .ssh/config if not present.
+    passphrase: "{{ ssh_passphrase }}"
+- name: Copy .ssh/config if not present
   ansible.builtin.copy:
-  src: init/ssh_config
-  dest: ~/.ssh/config
-  mode: '0644'
-- name: Create allowed_signers file if not present.
-  ansible.builtin.file:
-    path: "~/.ssh/allowed_signers"
+    src: init/ssh_config
+    dest: ~/.ssh/config
+    mode: '0644'
+- name: Create allowed_signers file if not present
+  ansible.builtin.copy:
+    dest: ~/.ssh/allowed_signers
+    content: '{{ ssh_allowed_signers_email }} namespaces="git" {{ lookup("file", "~/.ssh/id_ed25519.pub") }}' 
     mode: '644'
