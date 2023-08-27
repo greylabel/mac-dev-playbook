@@ -120,6 +120,10 @@ Upgrade essential packages. Note that running `pip3` without `sudo` with default
 pip3 install --upgrade pip setuptools virtualenv ipython
 ```
 
+```bash
+python3 -m pip install bcrypt
+```
+
 Install Ansible with `pip` for the current user.
 ```bash
 pip3 install --upgrade ansible
