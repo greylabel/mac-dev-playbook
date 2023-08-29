@@ -12,7 +12,7 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
     - name: Run pre-provision pre_task files in a block.
-      tags: ['pre']
+      tags: ['pre', 'never']
       block:
         - name: Run configured pre-provision ansible pre_task files.
           include_tasks: "{{ outer_item }}"
@@ -22,7 +22,6 @@
 
   roles:
     - role: elliotweiser.osx-command-line-tools
-      tags: ['always']
     - role: geerlingguy.mac.homebrew
       when: configure_homebrew
       tags: ['homebrew']
