@@ -235,6 +235,7 @@ homebrew_cask_apps:
   # - airfoil  # Sends audio from computer to outputs
   - arduino-ide  # Electronics prototyping platform
   - backblaze  # Data backup and storage service
+  - bbedit  # Text, code, and markup editor
   - billings-pro  # Invoices, estimates, quotes and time-tracking
   - chromedriver  # Automated testing of webapps for Google Chrome
   # - cyberduck  # Server and cloud storage browser

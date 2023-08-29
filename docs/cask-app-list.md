@@ -17,6 +17,7 @@
 * [Airfoil](https://rogueamoeba.com/airfoil/mac/)
 * [Arduino IDE](https://www.arduino.cc/en/software)
 * [Backblaze](https://www.backblaze.com/mac/install_backblaze.dmg)
+* [BBEdit](https://www.barebones.com/products/bbedit/)
 * [Billings Pro]()
 * [ChromeDirver](https://chromedriver.chromium.org/downloads)
 * [Cyberduck](https://cyberduck.io/download)
