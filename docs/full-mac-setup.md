@@ -1,6 +1,6 @@
 # Full Mac Setup Process (macOS Ventura 13.x)
 
-This document describes the full process of setting up a fresh macOS installation per my particular preferences and requirements. It is likely overkill or divergent from your specific use case, but hopefully will serve as a helpful reference.
+This document describes the full process of setting up a fresh macOS installation per my particular preferences and requirements — hopefully will serve as a helpful reference.
 
 ## macOS setup
 ### macOS
@@ -35,77 +35,6 @@ Install Rosetta (Apple silicon only).
 softwareupdate --install-rosetta --agree-to-license
 ```
 
-### SSH
-#### Generating a new SSH key
-
-> See Github's [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) for more information.
-
-Create directory for SSH keys and configuration and set permissions.
-```bash
-mkdir ~/.ssh && chmod 0700 ~/.ssh
-```
-Generate a new SSH key.
-```bash
-ssh-keygen -t ed25519 -C "grant@greylabel.net"
-```
-
-```bash
-chmod 600 ~/.ssh/id_ed25519 && chmod 644 ~/.ssh/id_ed25519.pub
-```
-
-At this point, the new key can be added to GitHub and other cloud services.
-
-#### SSH Configuration
-
-Create and set permissions on the `~/.ssh/config` file.
-
-```bash
-touch ~/.ssh/config && chmod 644 ~/.ssh/config
-```
-
-Modify the `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
-
-```bash
-IgnoreUnknown AddKeysToAgent,UseKeychain
-
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
-```
-
-#### Adding your SSH key to the ssh-agent
-```bash
-eval "$(ssh-agent -s)"
-```
-
-```bash
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-```
-
-### Allowed Signers
-> See: https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/
-
-Create and set permissions on the `allowed_signers` file.
-
-```bash
-touch ~/.ssh/allowed_signers && chmod 644 ~/.ssh/allowed_signers
-```
-
-Add an entry with a public key.
-
-```bash
-grant@greylabel.net namespaces="git" <public_key>
-```
-
-#### Adding a passphrase to an existing SSH key
-
-Add/replace the passphrase for an existing private key without regenerating the keypair.
-
-```bash
-ssh-keygen -p -f ~/.ssh/id_ed25519
-```
-
 ## Install Python and Ansible
 Ensure Python 3 is installed and note the version.
 
@@ -118,20 +47,23 @@ Upgrade essential packages. Note that running `pip3` without `sudo` with default
 ```bash
 python3 -m pip install --user --upgrade pip setuptools virtualenv ipython
 ```
-
+Install bcrypt — required for generating and securing SSH keys with ansible.
 ```bash
 python3 -m pip install --user bcrypt
 ```
 
-Install Ansible with `pip` for the current user.
+Install Ansible.
 ```bash
 python3 -m pip install --user ansible
 ```
+
 Add Python 3 to `PATH` environment variable.
 > Note that the locations of Python 3 binaries and libraries may be different depending on the version of Python installed. The following example assumes Python 3.9. The actual path can be determined by running `which python3` and `python3 -m site --user-base` in the terminal and adjusting the below accordingly.
+
 ```bash
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 ```
+
 > _If desired, Ansible and Python 3 can be (re)installed by Homebrew when the main playbook is run, and thus managed by `brew` going forward._
 
 ## Other manually installed items
@@ -144,8 +76,6 @@ Clone or download (this) [mac-dev-playbook](https://github.com/greylabel/mac-dev
 #### Clone with Git
 ```bash
 git clone git@github.com:greylabel/mac-dev-playbook.git
-
-git clone https://github.com/greylabel/mac-dev-playbook.git
 ```
 
 #### Download as a zip file
