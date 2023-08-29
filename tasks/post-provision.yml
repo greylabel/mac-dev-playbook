@@ -1,1 +1,14 @@
 ---
+- name: Switch to using brew-installed bash as default shell
+  shell: |
+    # Save Homebrew’s installed location.
+    BREW_PREFIX=$(brew --prefix)
+
+    # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+    ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+
+    # Switch to using brew-installed bash as default shell
+    if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
+    echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
+    chsh -s "${BREW_PREFIX}/bin/bash";
+    fi;

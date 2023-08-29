@@ -9,7 +9,7 @@
   community.crypto.openssh_keypair:
     type: ed25519
     path: ~/.ssh/id_ed25519
-    passphrase: "{{ ssh_private_key_passphrase }}"
+    passphrase: "{{ ssh_private_key_passphrase | mandatory }}"
 
 - name: Copy .ssh/config if not present
   ansible.builtin.template:

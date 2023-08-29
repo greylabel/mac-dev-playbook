@@ -303,9 +303,11 @@ dotfiles_files:
   - .gvimrc
   - .hushlogin
   - .inputrc
-  - .osx
+  - .macos
   - .screenrc
   - .tm_properties
+  - .tmux.conf
+  - .vimrc
   - .wgetrc
 
 
@@ -405,7 +407,7 @@ dockitems_persist:
     pos: 19
 
 configure_osx: true
-osx_script: "~/.osx --no-restart"
+osx_script: "~/.macos --no-restart"
 
 
 # Install packages from other package managers.
@@ -433,14 +435,14 @@ home_dirs_code:
   - Projects
   - Sites
 
-# Git config
-git_config_user_name: 'Grant Gaudet'
-git_config_user_email: 'grant@greylabel.net'
-git_config_github_user: 'greylabel'
+# Git config — include from Vault encrypted file.
+git_config_user_name: "{{ undef(hint='You must specify at runtime') }}"
+git_config_user_email: "{{ undef(hint='You must specify at runtime') }}"
+git_config_github_user: "{{ undef(hint='You must specify at runtime') }}"
 
-# SSH key pair, commit signing, and config
-ssh_allowed_signers_email: 'grant@greylabel.net'
-ssh_private_key_passphrase: 'vault'
+# SSH key pair, commit signing, and config — include from Vault encrypted file.
+ssh_allowed_signers_email: "{{ undef(hint='You must specify at runtime') }}"
+ssh_private_key_passphrase: "{{ undef(hint='You must specify at runtime') }}"
 
 # Glob pattern to ansible task files to run before all other tasks are started.
 pre_provision_tasks:
@@ -452,4 +454,5 @@ pre_provision_tasks:
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks:
   - tasks/post-provision.yml
+  - tasks/home-dirs-post.yml
   - tasks/ssh-post.yml
