@@ -4,16 +4,19 @@
     path: ~/.ssh
     state: directory
     mode: '700'
+
 - name: Generate a new SSH key if not present
   community.crypto.openssh_keypair:
     type: ed25519
     path: ~/.ssh/id_ed25519
-    passphrase: "{{ ssh_keypair_passphrase }}"
+    passphrase: "{{ ssh_private_key_passphrase }}"
+
 - name: Copy .ssh/config if not present
   ansible.builtin.template:
     src: init/ssh/config.j2
     dest: ~/.ssh/config
     mode: '0644'
+
 - name: Create allowed_signers file if not present
   ansible.builtin.template:
     src: init/ssh/allowed_signers.j2

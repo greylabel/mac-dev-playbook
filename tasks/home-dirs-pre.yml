@@ -5,6 +5,7 @@
     state: directory
     mode: '700'
   loop: "{{ home_dirs_code }}"
+
 ###  @TODO: Idempotent way to set ACL - `chmod +a "group:everyone deny delete"`
 - name: Set ACL on directory to prevent deletion.
   ansible.builtin.command: 'chmod +a "group:everyone deny delete" ~/{{ item }}'
