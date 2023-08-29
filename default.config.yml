@@ -432,9 +432,14 @@ home_dirs_code:
   - Projects
   - Sites
 
+git_config_user_name: 'Grant Gaudet'
+git_config_user_email: 'grant@greylabel.net'
+
+git_config_github_user: 'greylabel'
 
 ssh_allowed_signers_email: 'grant@greylabel.net'
 
+ssh_keypair_passphrase: 'vault'
 
 # Glob pattern to ansible task files to run before all other tasks are started.
 pre_provision_tasks:

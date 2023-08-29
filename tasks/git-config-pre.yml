@@ -1,6 +1,6 @@
 ---
 - name: Copy .gitconfig.local if not present
-  ansible.builtin.copy:
-    src: init/git/.gitconfig.local
+  ansible.builtin.template:
+    src: init/git/.gitconfig.local.j2
     dest: ~/.gitconfig.local
     mode: '0644'

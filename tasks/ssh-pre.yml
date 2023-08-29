@@ -8,14 +8,14 @@
   community.crypto.openssh_keypair:
     type: ed25519
     path: ~/.ssh/id_ed25519
-    passphrase: "{{ ssh_passphrase }}"
+    passphrase: "{{ ssh_keypair_passphrase }}"
 - name: Copy .ssh/config if not present
-  ansible.builtin.copy:
-    src: init/ssh/config
+  ansible.builtin.template:
+    src: init/ssh/config.j2
     dest: ~/.ssh/config
     mode: '0644'
 - name: Create allowed_signers file if not present
-  ansible.builtin.copy:
+  ansible.builtin.template:
+    src: init/ssh/allowed_signers.j2
     dest: ~/.ssh/allowed_signers
-    content: '{{ ssh_allowed_signers_email }} namespaces="git" {{ lookup("file", "~/.ssh/id_ed25519.pub") }}'
     mode: '644'
