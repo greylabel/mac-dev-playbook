@@ -1,4 +1,3 @@
-
 ## macOS config
 
 ### macOS Set Up Wizard
@@ -40,8 +39,6 @@ Enable Ask Siri = unchecked
 #### Touch ID
 #### Choose Your Look
 Auto
-
-
 
 ### Manual macOS config
 

@@ -35,7 +35,11 @@ Install Rosetta (Apple silicon only).
 softwareupdate --install-rosetta --agree-to-license
 ```
 
-## Install Python and Ansible
+### Manually installed apps
+Install applications that cannot be installed by Homebrew, through the App Store, or via another easy and Ansible-friendly scriptable process. This is done before the main playbook is run to ensure apps are in place for tasks that depend on their presence, like configuring the Dock.
+
+
+## Python and Ansible
 Ensure Python 3 is installed and note the version.
 
 ```bash
@@ -57,17 +61,15 @@ Install Ansible.
 python3 -m pip install --user ansible
 ```
 
-Add Python 3 to `PATH` environment variable.
-> Note that the locations of Python 3 binaries and libraries may be different depending on the version of Python installed. The following example assumes Python 3.9. The actual path can be determined by running `which python3` and `python3 -m site --user-base` in the terminal and adjusting the below accordingly.
+Add Python 3 to `PATH` environment variable temporarily.
 
-```bash
+> Note that the locations of Python 3 binaries and libraries may be different depending on the version of Python installed. The following example assumes Python 3.9. The actual path can be determined by running `which python3 && python3 --version` and `python3 -m site --user-base` in the terminal and adjusting the below accordingly.
+
+```
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 ```
 
-> _If desired, Ansible and Python 3 can be (re)installed by Homebrew when the main playbook is run, and thus managed by `brew` going forward._
-
-## Other manually installed items
-Install applications that cannot be installed by Homebrew, through the App Store, or via another easy and Ansible-friendly scriptable process. This is done before the main playbook is run to ensure apps are in place for tasks that depend on their presence, like configuring the Dock.
+>  _If desired, Ansible and Python 3 can be (re)installed by Homebrew when the main playbook is run, and thus managed by `brew` going forward._
 
 ## Mac Development Ansible Playbook
 ### Get the playbook
@@ -86,7 +88,7 @@ curl -LJO https://github.com/greylabel/mac-dev-playbook/archive/refs/heads/main.
 unzip mac-dev-playbook-main.zip && rm mac-dev-playbook-main.zip
 ```
 
-### Install requirements
+### Requirements
 >The below commands are run from the cloned `mac-dev-playbook` directory.
 Install required roles.
 ```bash
@@ -96,53 +98,24 @@ ansible-galaxy install -r requirements.yml
 ### Additional configuration
 Optionally, add a `config.yml` to the playbook if configuration overrides are required (store in iCloud, or copy over the network or using a USB flash drive).
 
-> @TODO: Note about `ansible vault` file for sensitive data.
+#### Ansible Vault
+> If encrypted content is required and will be supplied with Ansible Vault, adjust the commands below accordingly to include when running the various plays.
 
-### Run the playbook
-Run main playbook with 'BECOME' password and skip post tasks.
+### Plays, roles, tasks, and tags
+Run main playbook with 'BECOME' password and desired tags.
 ```bash
-ansible-playbook main.yml --ask-become-pass --skip-tags post
+ansible-playbook main.yml --ask-become-pass
 ```
-> @TODO: Note about `post` and `never`.
-
 
 #### Pre-provision pre_tasks
 
-##### Directories for source code
-Create directories for Projects and Sites. These directories will be used later in the process and are not present by default in macOS. They generally will contain source code and websites, respectively.
-```bash
-mkdir ~/Projects 
-chmod u+rwx,go-rwx ~/Projects
-```
-```bash
-mkdir ~/Sites 
-chmod u+rwx,go-rwx ~/Sites
-```
+tag `pre`
 
-###### ACLs for Projects and Sites
-Set ACLs for Projects and Sites to prevent accidental deletion.
-```bash 
-chmod +a "group:everyone deny delete" ~/Projects
-```
-```bash
-chmod +a "group:everyone deny delete" ~/Sites
-```
+##### Directories for source code
+Create `Projects` and `Sites` home directories. These directories will be used later in the process and are not present by default in macOS. They generally will contain source code and websites, respectively.
 
 ##### User specific Git config
 Create and use `~/.gitconfig.local` file for username / github token / etc.
-
-```
-[user]
-
-  name = Grant Gaudet
-  email = grant@greylabel.net
-  signingkey = ~/.ssh/id_ed25519.pub
-  
-[github]
-
-  user = greylabel
-
-```
 
 #### Roles
 
@@ -164,7 +137,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 > @TODO: Consider using [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) to manage package list and apps with a Brewfile, and potentially move back to Dotfiles repo.
 
-
 #### Dotfiles
 Dotfiles can be installed by Ansible when the main playbook is run. My [Dotfiles](https://github.com/greylabel/dotfiles/tree/main) include configuration for many of the packages installed by Homebrew, as well as an assortment of other tools and aliases.
 
@@ -181,33 +153,16 @@ Dotfiles can be installed by Ansible when the main playbook is run. My [Dotfiles
 ##### extra-packages
 
 ##### Post-provision tasks
+
+tag `post`
+
 > @TODO: Note about this is where tasks that are not idempotent live.
 
-
-
 ###### Activate utils installed by Homebrew
-
-> @TODO: Turn into a `post` task
-
-```bash
-# Save Homebrew’s installed location.
-BREW_PREFIX=$(brew --prefix)
-
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
-
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
-```
-
 
 ## Manual App configuration
 
 See [Manual macOS and Application Configuration](manual-macos-and-app-config.md) for detailed configuration guide.
-
 
 ## Syncing additional assets
 
