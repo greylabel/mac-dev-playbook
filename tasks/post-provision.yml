@@ -1,6 +1,7 @@
 ---
 - name: Switch to using brew-installed bash as default shell
   shell: |
+    set -o pipefail
     # Save Homebrew’s installed location.
     BREW_PREFIX=$(brew --prefix)
 
