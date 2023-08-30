@@ -24,22 +24,6 @@ sudo brew services start httpd
 # /usr/local/etc/httpd/httpd.conf
 ```
 
-### Git
-Create and use `~/.gitconfig.local` file for username / github token / etc.
-
-```
-[user]
-
-  name = Grant Gaudet
-  email = grant@greylabel.net
-  signingkey = ~/.ssh/id_ed25519.pub
-
-[github]
-
-  user = greylabel
-
-```
-
 ## Go
 See `.exports`.
 ```bash
