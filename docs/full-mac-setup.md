@@ -168,8 +168,15 @@ See [Manual macOS and Application Configuration](manual-macos-and-app-config.md)
 
 #### Fonts
 Sync fonts from Dropbox or another location.
+
+##### Dropbox
 ```bash
 cp -R ~/Dropbox/Apps/Config/Fonts/* ~/Library/Fonts/
+```
+
+##### iCloud Drive.
+```bash
+cp -R ~/Library/Mobile\ Documents/com~apple~CloudDocs/Config/fonts/* ~/Library/Fonts/
 ```
 
 #### Source code and websites
