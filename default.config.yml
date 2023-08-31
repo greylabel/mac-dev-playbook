@@ -436,13 +436,13 @@ home_dirs_code:
   - Sites
 
 # Git config — include from Vault encrypted file.
-git_config_user_name: "{{ undef(hint='You must specify at runtime') }}"
-git_config_user_email: "{{ undef(hint='You must specify at runtime') }}"
-git_config_github_user: "{{ undef(hint='You must specify at runtime') }}"
+git_config_user_name: "{{ undef(hint='Include in config.yml using vault') }}"
+git_config_user_email: "{{ undef(hint='Include in config.yml using vault') }}"
+git_config_github_user: "{{ undef(hint='Include in config.yml using vault') }}"
 
 # SSH key pair, commit signing, and config — include from Vault encrypted file.
-ssh_allowed_signers_email: "{{ undef(hint='You must specify at runtime') }}"
-ssh_private_key_passphrase: "{{ undef(hint='You must specify at runtime') }}"
+ssh_allowed_signers_email: "{{ undef(hint='Include in config.yml using vault') }}"
+ssh_private_key_passphrase: "{{ undef(hint='Include in config.yml using vault') }}"
 
 # Glob pattern to ansible task files to run before all other tasks are started.
 pre_provision_tasks:
