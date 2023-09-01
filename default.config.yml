@@ -45,8 +45,9 @@ homebrew_installed_packages:
   ### Other tools
   # - grc  # Colorize logfiles and command output
   # - lsd  # Clone of ls with colorful output, file type icons, and more
-  - tree  # Display directories as trees (with optional color/HTML output)
+  - tcl-tk  # Tool Command Language
   - tldr  # Simplified and community-driven man page
+  - tree  # Display directories as trees (with optional color/HTML output)
   # - z  # Tracks most-used directories to make cd smarter
   # - zsh-history-substring-search  # Zsh port of Fish shell's history search
 
@@ -100,7 +101,8 @@ homebrew_installed_packages:
   # - p7zip  # 7-Zip (high compression file archiver) implementation
   # - pigz  # Parallel gzip
   # - zopfli  # New zlib (gzip, deflate) compatible compressor
-  # - xz  # General-purpose data compression with high compression ratio
+  - xz  # General-purpose data compression with high compression ratio
+  - zlib  # General-purpose lossless data-compression library
 
   ### Containers and orchestration
   # - docker  # Pack, ship and run any application as a lightweight container
@@ -138,6 +140,7 @@ homebrew_installed_packages:
   # - percona-toolkit  # Command-line tools for MySQL, MariaDB and system tasks
   # - redis  # Persistent key-value database, with built-in net interface
   # - sqlite  # Command-line interface for SQLite
+  - sqlite3  # Command-line interface for SQLite
 
   ### Clients
   - curl  # Get a file from an HTTP, HTTPS or FTP server
