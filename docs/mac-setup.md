@@ -126,26 +126,18 @@ Create a `~/.gitconfig.local` file for username / github token / etc.
 
 #### Roles
 
+```bash
 ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "homebrew"
 ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "dotfiles"
 ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "mas"
 ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "dock"
+```
+
 
 ##### Command line tools
 
 ##### Homebrew
-Homebrew is installed by Ansible when the main playbook is run. For reference, the official command to install Homebrew with `curl` is below.
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-> Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
-
-Add Homebrew's `bin` directory to `PATH` environment variable, if needed for temporary use. This will be properly persisted when Dotfiles are installed later.
-
-```bash
-export PATH="/opt/homebrew/bin:$PATH"
-```
+Homebrew is installed by Ansible when the main playbook is run. Add Homebrew's `bin` directory to `PATH` environment variable, if needed for temporary use. This will be properly persisted when Dotfiles are installed later.
 
 > @TODO: Consider using [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) to manage package list and apps with a Brewfile, and potentially move back to Dotfiles repo.
 
