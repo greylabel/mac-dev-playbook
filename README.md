@@ -6,15 +6,16 @@ Based on the [Mac Development Ansible Playbook](https://github.com/geerlingguy/m
 
 ## Installation
 
-See the full from-scratch setup document [full-mac-setup.md](docs/full-mac-setup.md) for more details.
+See the full from-scratch setup document [full-mac-setup.md](docs/mac-setup.md) for more details.
 
 Setup goes through the following automated [A] and manual [M] steps.
 
-#### macOS install and initiation setup
+#### macOS installation and initiation setup
 1. [M] Install macOS
 1. [M] Sign in to iCloud and the App Store and run software update
 1. [M] Install Xcode command line tools and agree to license
 1. [M] Install Rosetta (Apple silicon)
+1. [M] Install apps that won't be handled through automation
 
 #### Python and Ansible
 1. [M] Add `python3` to `$PATH`, update packages, and install `ansible`

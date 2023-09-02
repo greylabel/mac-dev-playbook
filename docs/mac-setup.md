@@ -1,8 +1,8 @@
-# Full Mac Setup Process (macOS Ventura 13.x)
+# Mac Setup Process (macOS Ventura 13.x)
 
-This document describes the full process of setting up a fresh macOS installation per my particular preferences and requirements — hopefully will serve as a helpful reference.
+This document describes the full process of setting up a fresh macOS installation per my particular preferences and requirements — hopefully will serve as a helpful reference for anyone interested.
 
-## macOS setup
+## macOS installation and initiation setup
 ### macOS
 
 > See: [Create a bootable installer for macOS
@@ -73,7 +73,7 @@ export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 ## Mac Development Ansible Playbook
 ### Get the playbook
-Clone or download (this) [mac-dev-playbook](https://github.com/greylabel/mac-dev-playbook) git repo to a temporary location, or wherever you prefer to store source code checkouts, e.g. `~/Projects`.
+Clone or download (this) [mac-dev-playbook](https://github.com/greylabel/mac-dev-playbook) git repo to a temporary location, or wherever you prefer to store source code checkouts, e.g. `/tmp` or `~/Projects`.
 
 #### Clone with Git
 ```bash
@@ -90,34 +90,46 @@ unzip mac-dev-playbook-main.zip && rm mac-dev-playbook-main.zip
 
 ### Requirements
 >The below commands are run from the cloned `mac-dev-playbook` directory.
+ 
 Install required roles.
 ```bash
 ansible-galaxy install -r requirements.yml
 ```
 
 ### Additional configuration
-Optionally, add a `config.yml` to the playbook if configuration overrides are required (store in iCloud, or copy over the network or using a USB flash drive).
+Optionally, copy a `config.yml` file to he cloned `mac-dev-playbook` directory,  if configuration overrides are required.
 
 #### Ansible Vault
 > If encrypted content is required and will be supplied with Ansible Vault, adjust the commands below accordingly to include when running the various plays.
 
 ### Plays, roles, tasks, and tags
-Run main playbook with 'BECOME' password and desired tags.
+
 ```bash
-ansible-playbook main.yml --ask-become-pass
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "pre"
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --skip-tags "post, post"
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "post"
 ```
 
 #### Pre-provision pre_tasks
 
-tag `pre`
+```bash
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "pre"
+```
 
 ##### Directories for source code
 Create `Projects` and `Sites` home directories. These directories will be used later in the process and are not present by default in macOS. They generally will contain source code and websites, respectively.
 
+##### SSH key pair
+
 ##### User specific Git config
-Create and use `~/.gitconfig.local` file for username / github token / etc.
+Create a `~/.gitconfig.local` file for username / github token / etc.
 
 #### Roles
+
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "homebrew"
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "dotfiles"
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "mas"
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "dock"
 
 ##### Command line tools
 
@@ -148,13 +160,18 @@ Dotfiles can be installed by Ansible when the main playbook is run. My [Dotfiles
 
 #### Tasks
 
-##### osx
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "extra-packages"
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "osx"
 
 ##### extra-packages
+
+##### osx
 
 ##### Post-provision tasks
 
 tag `post`
+
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "post"
 
 > @TODO: Note about this is where tasks that are not idempotent live.
 
@@ -162,9 +179,9 @@ tag `post`
 
 ## Manual App configuration
 
-See [Manual macOS and Application Configuration](manual-macos-and-app-config.md) for detailed configuration guide.
+See [Manual macOS and Application Configuration](macos-and-app-manual-config.md) for detailed configuration guide.
 
-## Syncing additional assets
+## Additional assets
 
 #### Fonts
 Sync fonts from Dropbox or another location.
@@ -182,5 +199,5 @@ cp -R ~/Library/Mobile\ Documents/com~apple~CloudDocs/Config/fonts/* ~/Library/F
 #### Source code and websites
 Optionally, copy contents of `~/Projects` and/or `~/Sites` folder(s) from another Mac (to save time).
 
-## Cleanup
-Remove or move this repo from its temporary location.
+## Temporary artifacts
+Remove or move this repo from its temporary location and use a proper git stored with other source code files.

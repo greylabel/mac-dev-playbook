@@ -1,6 +1,6 @@
 # Automated Installation
 
-> See `defaults.config.yml` for actual installation list.
+> See `defaults.config.yml` for active installation list.
 
 ### Homebrew Cask
 * [1Password](https://agilebits.com/downloads)
