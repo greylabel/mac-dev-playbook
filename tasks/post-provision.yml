@@ -1,15 +1,12 @@
 ---
-- name: Switch to using brew-installed bash as default shell
-  shell: |
-    set -o pipefail
-    # Save Homebrew’s installed location.
-    BREW_PREFIX=$(brew --prefix)
-
-    # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-    ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
-
-    # Switch to using brew-installed bash as default shell
-    if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-    echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-    chsh -s "${BREW_PREFIX}/bin/bash";
-    fi;
+- name: Check if Homebrew bash is installed
+  ansible.builtin.command: fgrep "{{ homebrew_prefix }}/bin/bash" /etc/shells
+  register: homebrew_bash_installed
+- name: Add Homebrew bash to /etc/shells
+  ansible.builtin.command: echo "{{homebrew_prefix}}/bin/bash" | sudo tee -a /etc/shells
+  when: not homebrew_bash_installed.stdout
+- name: Change default shell to Homebrew bash
+  ansible.builtin.user:
+    name: "{{ansible_user_id}}"
+    shell: "{{homebrew_prefix}}/bin/bash"
+  when: homebrew_bash_installed.stdout
