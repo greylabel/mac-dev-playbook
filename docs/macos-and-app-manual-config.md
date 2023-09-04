@@ -22,6 +22,7 @@ Account name:
 Password:
 
 Hint:
+
 #### Enable Location Services
 Enable Location Services on this Mac = unchecked
 #### Select Your Time Zone
@@ -43,17 +44,81 @@ Auto
 ### Manual macOS config
 
 #### System Preferences
+
 ##### Apple ID
-> @TODO: Full accounting of all settings.
+- Photo = <verify>
+###### Name, Phone, Email
+- Name = <verify>
+- Birthday = <verify>
+- Reachable at = <verify>
+- Announcements = unchecked
+- Apps, Music, TV, and More = unchecked
+- Apple News Newsletter = unchecked
+###### Password & Security
+- Apple ID = <verify>
+- Password = <update if preferred>
+- Two-Factor Authentication = On
+- Trusted Phone Numbers = <verify>
+- Security Keys = <add if preferred>
+- Account Recovery = <verify Recovery Key: On>
+- Legacy Contact = <verify>
+- Automatic Verification = checked
+- Apps Using Apple ID = <verify>
+###### Payment & Shipping
+- Payment Method = <verify>
+- Shipping Address = <verify>
+
+###### iCloud
+- Optimize Mac Storage = <set per computer>
+
+Apps Using iCloud
+- Photos = On
+- iCloud Drive = On
+- iCloud Mail = Off
+- Passwords & Keychain = Off
+- Notes = On
+- Find My Mac = Off
+- Contacts = checked
+- Calendars = checked
+- Reminders = checked
+- Safari = checked
+- News = checked
+- Stocks = checked
+- Home = checked
+- Wallet = checked
+- Siri = checked
+- Freeform = checked
+
+iCloud+
+- Private Relay = checked
+  - IP Address Location = Use Country and Time Zone
+- Hide My Email = <not setup>
+- Custom Email Domain = <not setup>
+- Advanced Data Protection = On
+- Access iCloud Data on the Web = unchecked
+
+###### Media & Purchases
+- Account = <verify>
+- Subscriptions = <verify>
+- Touch ID for Purchases = checked
+
+###### Family Sharing
+> Not setup
+
+###### Devices
+
 
 ##### Wi-Fi
 - Ask to join hotspots = unchecked
 
 ##### Bluetooth
+- This Mac is discoverable as <hostname> while Bluetooth Settings is open. = checked
+###### Advanced
+- Open when no keyboard is detected = checked
+- Open when no mouse or trackpad is detected = checked
 
 ##### Network
-
-##### Firewall
+###### Firewall
 - Firewall = checked
 - Firewall Options -> Block all incoming connections = unchecked
 - Firewall Options -> Automatically allow built-in software to receive incoming connections = unchecked
@@ -61,18 +126,28 @@ Auto
 - Firewall Options -> Enable stealth mode = unchecked
 
 ##### Notification
-- Show previews -> never
+- Show previews = never
+- Allow notifications when display is sleeping = unchecked
 - Allow notifications when screen is locked = unchecked
+- Allow notifications when mirroring or sharing the display = unchecked
+
 ###### Application Notifications
 > @TODO: Explore how to programmatically configure these settings.
 
 ##### Sound
+- Alert sound = Boop
+- Play sound effects through = Selected Sound Output Device
+- Alert volume = <default>
 - Play sound on startup = unchecked
 - Play user interface sound effects = unchecked
+- Play feedback when volume is changed = unchecked
 
 ##### Focus
 - Share across devices = checked
 - Focus Status -> Share Focus Status = checked
+###### Do Not Disturb
+###### Driving
+
 
 ##### Screen Time
 - Screen Time = unchecked
@@ -81,8 +156,17 @@ Auto
 ###### About
 - Name = {hostname}
 ###### Software Update
+Automatic Updates
+- Check for updates = checked
+- Download new updates when available = checked
 - Install macOS updates = checked
 - Install application updates from the App Store = checked
+- Install Security Responses and system files = checked
+Beta Updates = Off
+###### Storage
+Store in iCloud = Off
+Optimize Storage = Off
+Empty Trash automatically = Off
 ###### AirDrop & Handoff
 - Allow Handoff between this Mac and your iCloud devices = unchecked
 - AirDrop = No One
@@ -93,45 +177,112 @@ Open at Login
 Allow in the Background
 ###### Language & Region
 - Preferred languages = [English (US), Italian (Italy)]
+Region = United States
+Calendar = Gregorian
+Temperature = Fahrenheit (°F)
+Measurement system = US
+First day of the week = Sunday
+Date format = 8/19/23
+Number format = 1,234,567.89
+Live Text = unchecked
+Applications
 ###### Date & Time
+Set time and date automatically = checked
+Source = Apple (time.apple.com.)
+Date and time = <now>
+24-hour time = checked
+Set time zone automatically using your current location = unchecked
+Time zone = <Mountain Daylight Time>
+Closest city = Boise, ID - United States
 ###### Sharing
-- Local hostname = {hostname}
+Screen Sharing = unchecked
+File Sharing = unchecked
+Printer Sharing = unchecked
+Remote Login = unchecked
+Remote Management = unchecked
+Remote Apple Events = unchecked
+Internet Sharing = unchecked
+Content Caching = unchecked
+Media Sharing = unchecked
+Bluetooth Sharing = unchecked
+- Local hostname = {hostname}.local
+- Use dynamic global hostname = unchecked
 ###### Time Machine
 ###### Transfer or Reset
 ###### Startup Disk
 
 ##### Appearance
 - Appearance = Auto
-- Accent color = green
-- Highlight color = green
-- Sidebar icon size = medium
+- Accent color = Green
+- Highlight color = Green
+- Sidebar icon size = Medium
 - Allow wallpaper tinting in windows = unchecked
 - Show scroll bars = Automatically based on mouse or trackpad
 - Click in the scroll bar to = Jump to the next page
 
 ##### Accessibility
+> all sections left a defaults
+###### Vision
+VoiceOver
+Zoom
+Display
+Spoken Content
+Descriptions
+###### Hearing
+Audio
+RTT
+Captions
+###### Motor
+Voice Control
+Keyboard
+Pointer Control
+Switch Control
+###### General
+Siri
+Shortcut
+
 
 ##### Control Center
-
 ###### Control Center Modules
 - Wi-Fi = Show in Menu Bar
 - Bluetooth = Show in Menu Bar
 - AirDrop = Show in Menu Bar
 - Focus = Always Show in Menu Bar
-- Stage Manager = Always Show in Menu Bar
+- Stage Manager = Show in Menu Bar
 - Screen Mirroring = Show When Active
 - Display = Show When Active
 - Sound = Show When Active
 - Now Playing = Show When Active
 ###### Other Modules
-- Accessibility Shortcuts -> Show in Menu Bar = unchecked
-- Hearing -> Show in Menu Bar = unchecked
-- Fast User Switching = Don't Show
+- Accessibility Shortcuts
+  - Show in Menu Bar = unchecked
+  - Show in Control Center = unchecked
+- Battery
+  - Show in Menu Bar = checked
+  - Show in Control Center = unchecked
+  - Show Percentage = checked
+- Hearing
+  - Show in Menu Bar = unchecked
+  - Show in Control Center = unchecked
+- Fast User Switching
+  - Show in Menu Bar = Don't Show
+  - Show in Control Center = unchecked
+- Keyboard Brightness
+  - Show in Menu Bar = unchecked
+  - Show in Control Center = unchecked
 ###### Menu Bar Only
-- Clock -> Time -> Use a 24-hour clock = checked
-- Clock -> Display the time with seconds = checked
+- Clock
+  - Date -> Show date = Always
+  - Date -> Show the day of the week = checked
+  - Time -> Style = Digital
+  - Time -> Use a 24-hour clock = checked
+  - Time -> Show AM/PM = unchecked
+  - Time -> Flash the time separators = unchecked
+  - Time -> Display the time with seconds = unchecked
+  - Time -> Announce the time = unchecked
+  - Time -> Interval = On the hour
 - Spotlight -> Show in Menu Bar
-- Siri -> Show in Menu Bar
+- Siri -> Don't Show in Menu Bar
 - Time Machine -> Don't Show in Menu Bar
 
 ##### Siri & Spotlight
@@ -148,27 +299,84 @@ Allow in the Background
 - Allow applications downloaded from = App Store and identified developers
 - FileVault -> Turn On FileVault = checked
 ###### Others
+- Profiles = <empty>
 
 ##### Desktop & Dock
+###### Dock
+- Size = <default or 36>
+- Magnification = Off
+- Position on screen = Bottom
+- Minimize windows using = Scale Effect
+- Double-click a window's title bar to = Do Nothing
+- Minimize windows into application icon = unchecked
+- Automatically hide and show the Dock = unchecked
+- Animate opening application = unchecked
+- Show indicators for open applications = checked
+- Show recent application in Dock = unchecked
+###### Menu Bar
+- Automatically hide and show the menu bar = In Full Screen Only
+- Recent documents, application, and servers = None
+###### Windows & Apps
+- Prefer tabs when opening documents = In Full Screen
+- Ask to keep changes when closing documents = checked
+- Close windows when quitting an application = checked
+- Stage Manager = unchecked
+- Default web browser = Safari
+###### Mission Control
+- Automatically rearrange Spaces based on most recent use = checked
+- When switching to an application, switch to a Space with open windows for the application = unchecked
+- Group windows by application = unchecked
+- Displays have separate Spaces = unchecked
 
 ##### Displays
+- Color Profile = <customize if doing photo/video work>
 - Advanced -> Show resolutions as list = checked
+- Advanced -> Link to Mac or iPad -> Allow pointer and keyboard to move between any nearby Mac or iPad = unchecked
+- Advanced -> Link to Mac or iPad -> Push through the edge of a display to connect to a nearby Mac or iPad = unchecked
+- Advanced -> Link to Mac or iPad -> Automatically reconnect to any nearby Mac or iPad = unchecked
+- Advanced -> Battery & Energy -> Slightly dim the display on battery = checked
+- Advanced -> Battery & Energy -> Prevent automatic sleeping on power adapter when the display is off = unchecked
 
 ##### Wallpaper
+- Colors = Black
 
 ##### Screen Saver
-###### Lock Screen
-- Start Screen Saver when inactive = Never
-- Turn display off when inactive = For 5 minutes
-- Require password after screen saver begins or display is turned off = After 5 seconds
+- Message = <default/empty>
+- Lock Screen Settings = <See Lock Screen>
+- Show with clock = unchecked
 
 ##### Energy Saver
 
-##### Lock Screen
+##### Battery
+- Low Power Mode = Never
+- Battery Health -> Optimize Battery Charging = checked
+- Battery Health -> Manage battery longevity = checked
+- Options -> Enable Power Nap = Only on Power Adapter
+- Options -> Wake for network access = Only on Power Adapter
 
-##### Login Password
+##### Lock Screen
+- Start Screen Saver when inactive = Never
+- Turn display off on battery when inactive = For 3 minutes
+- Turn display off on power adapter when inactive = For 5 minutes
+- Require password after screen saver begins or display is turned of = After 5 seconds
+- Show message when locked = unchecked
+- When Switching User
+  - Login window shows = Name and password
+  - Show the Sleep, Restart, and Shut Down buttons = checked
+  - Show password hints = unchecked
+
+##### Touch ID & Password
+###### Password
+###### Touch ID
+- Use Touch ID to unlock your Mac = checked
+- Use Touch ID for Apple Pay = checked
+- Use Touch ID for purchases in iTunes Store, App Store, and Apple Books = checked
+- Use Touch ID for autofilling passwords = unchecked
+- Use Touch ID for fast user switching = unchecked
 
 ##### Users & Groups
+- Guest User = Off
+- Automatically log in as = Off
 
 ##### Passwords
 ###### Password Options
@@ -179,20 +387,57 @@ Allow in the Background
 
 ##### Game Center
 
+##### Wallet & Apple Pay
+Payment Cards = <add cards>
+Payment Details = <verify details>
+- Compatible Cards = unchecked
+- Add Orders to Wallet = unchecked
+
 ##### Keyboard
 ###### Text Input
+- Key repeat rate = Fast
+- Delay until repeat = Short
+- Adjust keyboard brightness in low light = checked
+- Keyboard brightness = <dynamic>
+- Turn keyboard backlight off after inactivity = Never
+- Press fn key to = Do Nothing
+- Keyboard navigation = unchecked
 - Input Sources -> {add Italian}
-- Input Sources -> Capitalize words automatically = unchecked
-- Input Sources -> Add period with double-space = unchecked
+- All Input Sources -> Show Input menu in menu bar = checked 
+- All Input Sources -> Correct spelling automatically = unchecked
+- All Input Sources -> Capitalize words automatically = unchecked
+- All Input Sources -> Add period with double-space = unchecked
+- All Input Sources -> Spelling = Automatic by Language
+- All Input Sources -> Use smart quotes and dashes = unchecked
+- All Input Sources -> For double quotes = <default>
+- All Input Sources -> For single quotes = <default>
+- Dictation = unchecked 
 
 ##### Trackpad
 ###### Point & Click
+- Tracking speed = <default>
+- Click = <default>
+- Force Click and haptic feedback = checked
+- Look up & data detectors = Force Click with One Finger
+- Secondary click = Click with Two Fingers
+- Tap to click = unchecked
 ###### Scroll & Zoom
 - Natural scrolling = checked
+- Zoom in or out = checked
+- Smart zoom = checked
+- Rotate = checked
 ###### More Gestures
+- Swipe between pages = Off
+- Swipe between full-screen application = Off
+- Notifications Center = checked
+- Mission Control = Swipe Up with Three Fingers
+- App Exposé = Off
+- Launchpad = checked
+- Show Desktop = checked
 
 ##### Printers & Scanners
-
+- Default pinter = Last Printer Used
+- Default paper size = US Letter
 
 ### Finder configuration
 
@@ -360,9 +605,9 @@ Open app and do not send usage statistics.
 
 #### Rectangle
 Open app and grant system permissions.
-
-Launch on login
-Check for updates automatically
+##### Settings
+- Launch on login
+- Check for updates automatically
 
 #### Textmate
 - Settings -> Files -> With no open documents -> Create one at startup = unchecked
