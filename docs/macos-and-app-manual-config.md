@@ -1,67 +1,106 @@
 # macOS config
 
 ## macOS Set Up Wizard
+
 ### Select Your Country or Region
+
 United States
+
 ### Accessibility
+
 Not Now
+
 ### Select Your Wi-Fi Network
+
 ### Data & Privacy
+
 ### Migration Assistant
+
 Not Now
+
 ### Sign In with Your Apple ID
+
 Set Up Later
+
 ### Terms and Conditions
+
 Agree
+
 ### Create a Computer Account
+
 Full name:
 Account name:
 Password:
 Hint:
+
 ### Enable Location Services
+
 Enable Location Services on this Mac = unchecked
+
 ### Select Your Time Zone
+
 Set time zone automatically using current location = unchecked
 Closest City:
+
 ### Analytics
+
 Share Mac Analytics with Apple = unchecked
 Share crash data with app developers = unchecked
+
 ### Screen Time
+
 Set Up Later
+
 ### Enable Siri
+
 Enable Ask Siri = unchecked
+
 ### Touch ID
+
 ### Choose Your Look
+
 Auto
 
 ## Manual macOS config
+
 ### System Preferences
 
 #### Apple ID
-- Photo = <verify>
+
+- Photo = _verify_
+
 ##### Name, Phone, Email
-- Name = <verify>
-- Birthday = <verify>
-- Reachable at = <verify>
+
+- Name = _verify_
+- Birthday = _verify_
+- Reachable at = _verify_
 - Announcements = unchecked
 - Apps, Music, TV, and More = unchecked
 - Apple News Newsletter = unchecked
+
 ##### Password & Security
-- Apple ID = <verify>
-- Password = <update if preferred>
+
+- Apple ID = _verify_
+- Password = _update if preferred_
 - Two-Factor Authentication = On
-- Trusted Phone Numbers = <verify>
-- Security Keys = <add if preferred>
-- Account Recovery = <verify Recovery Key: On>
-- Legacy Contact = <verify>
+- Trusted Phone Numbers = _verify_
+- Security Keys = _add if preferred_
+- Account Recovery = _verify Recovery Key: On_
+- Legacy Contact = _verify_
 - Automatic Verification = checked
-- Apps Using Apple ID = <verify>
+- Apps Using Apple ID = _verify_
+
 ##### Payment & Shipping
-- Payment Method = <verify>
-- Shipping Address = <verify>
+
+- Payment Method = _verify_
+- Shipping Address = _verify_
+
 ##### iCloud
-- Optimize Mac Storage = <set per computer>
+
+- Optimize Mac Storage = _set per computer_
+
 ###### Apps Using iCloud
+
 - Photos = On
 - iCloud Drive = On
 - iCloud Mail = Off
@@ -78,32 +117,45 @@ Auto
 - Wallet = checked
 - Siri = checked
 - Freeform = checked
+
 ###### iCloud+
+
 - Private Relay = checked
   - IP Address Location = Use Country and Time Zone
-- Hide My Email = <not setup>
-- Custom Email Domain = <not setup>
+- Hide My Email = _not setup_
+- Custom Email Domain = _not setup_
 - Advanced Data Protection = On
 - Access iCloud Data on the Web = unchecked
+
 ##### Media & Purchases
-- Account = <verify>
-- Subscriptions = <verify>
+
+- Account = _verify_
+- Subscriptions = _verify_
 - Touch ID for Purchases = checked
+
 ##### Family Sharing
+>
 > Not setup
+>
 ##### Devices
 
 #### Wi-Fi
+
 - Ask to join hotspots = unchecked
 
 #### Bluetooth
-- This Mac is discoverable as <hostname> while Bluetooth Settings is open. = checked
+
+- This Mac is discoverable as {hostname} while Bluetooth Settings is open. = checked
+
 ##### Advanced
+
 - Open when no keyboard is detected = checked
 - Open when no mouse or trackpad is detected = checked
 
 #### Network
+
 ##### Firewall
+
 - Firewall = checked
 - Firewall Options -> Block all incoming connections = unchecked
 - Firewall Options -> Automatically allow built-in software to receive incoming connections = unchecked
@@ -111,54 +163,76 @@ Auto
 - Firewall Options -> Enable stealth mode = unchecked
 
 #### Notification
+
 - Show previews = never
 - Allow notifications when display is sleeping = unchecked
 - Allow notifications when screen is locked = unchecked
 - Allow notifications when mirroring or sharing the display = unchecked
+
 ##### Application Notifications
+>
 > @TODO: Explore how to programmatically configure these settings.
 
 #### Sound
+
 - Alert sound = Boop
 - Play sound effects through = Selected Sound Output Device
-- Alert volume = <default>
+- Alert volume = _default_
 - Play sound on startup = unchecked
 - Play user interface sound effects = unchecked
 - Play feedback when volume is changed = unchecked
 
 #### Focus
+
 - Share across devices = checked
 - Focus Status -> Share Focus Status = checked
+
 ##### Do Not Disturb
+
 ##### Driving
 
 #### Screen Time
+
 - Screen Time = unchecked
 
 #### General
+
 ##### About
+
 - Name = {hostname}
+
 ##### Software Update
+
 ###### Automatic Updates
+
 - Check for updates = checked
 - Download new updates when available = checked
 - Install macOS updates = checked
 - Install application updates from the App Store = checked
 - Install Security Responses and system files = checked
+
 ###### Beta Updates = Off
+
 ##### Storage
+
 Store in iCloud = Off
 Optimize Storage = Off
 Empty Trash automatically = Off
+
 ##### AirDrop & Handoff
+
 - Allow Handoff between this Mac and your iCloud devices = unchecked
 - AirDrop = No One
 - AirPlay Receiver = unchecked
 - Allow AirPlay for = Current User
+
 ##### Login Items
+
 - Open at Login
 - Allow in the Background
+
 ##### Language & Region
+
 - Preferred languages = [English (US), Italian (Italy)]
 - Region = United States
 - Calendar = Gregorian
@@ -168,16 +242,20 @@ Empty Trash automatically = Off
 - Date format = 8/19/23
 - Number format = 1,234,567.89
 - Live Text = unchecked
-- Applications = <empty>
+- Applications = _empty_
+
 ##### Date & Time
+
 - Set time and date automatically = checked
 - Source = Apple (time.apple.com.)
-- Date and time = <now>
+- Date and time = _now_
 - 24-hour time = checked
 - Set time zone automatically using your current location = unchecked
-- Time zone = <Mountain Daylight Time>
+- Time zone = _Mountain Daylight Time_
 - Closest city = Boise, ID - United States
+
 ##### Sharing
+
 - Screen Sharing = unchecked
 - File Sharing = unchecked
 - Printer Sharing = unchecked
@@ -190,11 +268,15 @@ Empty Trash automatically = Off
 - Bluetooth Sharing = unchecked
 - Local hostname = {hostname}.local
 - Use dynamic global hostname = unchecked
+
 ##### Time Machine
+
 ##### Transfer or Reset
+
 ##### Startup Disk
 
 #### Appearance
+
 - Appearance = Auto
 - Accent color = Green
 - Highlight color = Green
@@ -204,28 +286,49 @@ Empty Trash automatically = Off
 - Click in the scroll bar to = Jump to the next page
 
 #### Accessibility
+>
 > all sections left a defaults
+>
 ##### Vision
+
 ###### VoiceOver
+
 ###### Zoom
+
 ###### Display
+
 ###### Spoken Content
+
 ###### Descriptions
+
 ##### Hearing
+
 ###### Audio
+
 ###### RTT
+
 ###### Captions
+
 ##### Motor
+
 ###### Voice Control
+
 ###### Keyboard
+
 ###### Pointer Control
+
 ###### Switch Control
+
 ##### General
+
 ###### Siri
+
 ###### Shortcut
 
 #### Control Center
+
 ##### Control Center Modules
+
 - Wi-Fi = Show in Menu Bar
 - Bluetooth = Show in Menu Bar
 - AirDrop = Show in Menu Bar
@@ -235,7 +338,9 @@ Empty Trash automatically = Off
 - Display = Show When Active
 - Sound = Show When Active
 - Now Playing = Show When Active
+
 ##### Other Modules
+
 - Accessibility Shortcuts
   - Show in Menu Bar = unchecked
   - Show in Control Center = unchecked
@@ -252,7 +357,9 @@ Empty Trash automatically = Off
 - Keyboard Brightness
   - Show in Menu Bar = unchecked
   - Show in Control Center = unchecked
+
 ##### Menu Bar Only
+
 - Clock
   - Date -> Show date = Always
   - Date -> Show the day of the week = checked
@@ -268,6 +375,7 @@ Empty Trash automatically = Off
 - Time Machine -> Don't Show in Menu Bar
 
 #### Siri & Spotlight
+
 - Ask Siri = unchecked
 - Spotlight -> Search Results
   - Applications = checked
@@ -275,17 +383,25 @@ Empty Trash automatically = Off
   - {all other options} = unchecked
 
 #### Privacy & Security
+
 ##### Privacy
+
 - Location Services -> Location Services = unchecked
+
 ##### Security
+
 - Allow applications downloaded from = App Store and identified developers
 - FileVault -> Turn On FileVault = checked
+
 ##### Others
-- Profiles = <empty>
+
+- Profiles = _empty_
 
 #### Desktop & Dock
+
 ##### Dock
-- Size = <default or 36>
+
+- Size = _default_ or `36`
 - Magnification = Off
 - Position on screen = Bottom
 - Minimize windows using = Scale Effect
@@ -295,23 +411,30 @@ Empty Trash automatically = Off
 - Animate opening application = unchecked
 - Show indicators for open applications = checked
 - Show recent application in Dock = unchecked
+
 ##### Menu Bar
+
 - Automatically hide and show the menu bar = In Full Screen Only
 - Recent documents, application, and servers = None
+
 ##### Windows & Apps
+
 - Prefer tabs when opening documents = In Full Screen
 - Ask to keep changes when closing documents = checked
 - Close windows when quitting an application = checked
 - Stage Manager = unchecked
 - Default web browser = Safari
+
 ##### Mission Control
+
 - Automatically rearrange Spaces based on most recent use = checked
 - When switching to an application, switch to a Space with open windows for the application = unchecked
 - Group windows by application = unchecked
 - Displays have separate Spaces = unchecked
 
 #### Displays
-- Color Profile = <customize if doing photo/video work>
+
+- Color Profile = _customize if doing photo/video work_
 - Advanced -> Show resolutions as list = checked
 - Advanced -> Link to Mac or iPad -> Allow pointer and keyboard to move between any nearby Mac or iPad = unchecked
 - Advanced -> Link to Mac or iPad -> Push through the edge of a display to connect to a nearby Mac or iPad = unchecked
@@ -320,16 +443,19 @@ Empty Trash automatically = Off
 - Advanced -> Battery & Energy -> Prevent automatic sleeping on power adapter when the display is off = unchecked
 
 #### Wallpaper
+
 - Colors = Black
 
 #### Screen Saver
+
 - Message = <default/empty>
-- Lock Screen Settings = <See Lock Screen>
+- Lock Screen Settings = _See Lock Screen_
 - Show with clock = unchecked
 
 #### Energy Saver
 
 #### Battery
+
 - Low Power Mode = Never
 - Battery Health -> Optimize Battery Charging = checked
 - Battery Health -> Manage battery longevity = checked
@@ -337,6 +463,7 @@ Empty Trash automatically = Off
 - Options -> Wake for network access = Only on Power Adapter
 
 #### Lock Screen
+
 - Start Screen Saver when inactive = Never
 - Turn display off on battery when inactive = For 3 minutes
 - Turn display off on power adapter when inactive = For 5 minutes
@@ -348,8 +475,11 @@ Empty Trash automatically = Off
   - Show password hints = unchecked
 
 #### Touch ID & Password
+
 ##### Password
+
 ##### Touch ID
+
 - Use Touch ID to unlock your Mac = checked
 - Use Touch ID for Apple Pay = checked
 - Use Touch ID for purchases in iTunes Store, App Store, and Apple Books = checked
@@ -357,11 +487,14 @@ Empty Trash automatically = Off
 - Use Touch ID for fast user switching = unchecked
 
 #### Users & Groups
+
 - Guest User = Off
 - Automatically log in as = Off
 
 #### Passwords
+
 ##### Password Options
+
 - AutoFill Passwords = unchecked
 - Security Recommendation -> Detect Leaked Passwords = unchecked
 
@@ -370,45 +503,54 @@ Empty Trash automatically = Off
 #### Game Center
 
 #### Wallet & Apple Pay
-- Payment Cards = <add cards>
-- Payment Details = <verify details>
+
+- Payment Cards = _add cards_
+- Payment Details = _verify details_
 - Compatible Cards = unchecked
 - Add Orders to Wallet = unchecked
 
 #### Keyboard
+
 ##### Text Input
+
 - Key repeat rate = Fast
 - Delay until repeat = Short
 - Adjust keyboard brightness in low light = checked
-- Keyboard brightness = <dynamic>
+- Keyboard brightness = _dynamic_
 - Turn keyboard backlight off after inactivity = Never
 - Press fn key to = Do Nothing
 - Keyboard navigation = unchecked
 - Input Sources -> {add Italian}
-- All Input Sources -> Show Input menu in menu bar = checked 
+- All Input Sources -> Show Input menu in menu bar = checked
 - All Input Sources -> Correct spelling automatically = unchecked
 - All Input Sources -> Capitalize words automatically = unchecked
 - All Input Sources -> Add period with double-space = unchecked
 - All Input Sources -> Spelling = Automatic by Language
 - All Input Sources -> Use smart quotes and dashes = unchecked
-- All Input Sources -> For double quotes = <default>
-- All Input Sources -> For single quotes = <default>
-- Dictation = unchecked 
+- All Input Sources -> For double quotes = _default_
+- All Input Sources -> For single quotes = _default_
+- Dictation = unchecked
 
 #### Trackpad
+
 ##### Point & Click
-- Tracking speed = <default>
-- Click = <default>
+
+- Tracking speed = _default_
+- Click = _default_
 - Force Click and haptic feedback = checked
 - Look up & data detectors = Force Click with One Finger
 - Secondary click = Click with Two Fingers
 - Tap to click = unchecked
+
 ##### Scroll & Zoom
+
 - Natural scrolling = checked
 - Zoom in or out = checked
 - Smart zoom = checked
 - Rotate = checked
+
 ##### More Gestures
+
 - Swipe between pages = Off
 - Swipe between full-screen application = Off
 - Notifications Center = checked
@@ -418,12 +560,14 @@ Empty Trash automatically = Off
 - Show Desktop = checked
 
 #### Printers & Scanners
+
 - Default pinter = Last Printer Used
 - Default paper size = US Letter
 
 ## Finder configuration
 
 ### Finder Settings
+
 - Finder Settings -> General -> Show these items on the desktop :: [] = unchecked
 - Finder Settings -> General -> New Finder windows show :: {home directory}
 - Finder Settings -> General -> Open folders in tabs instead of new windows = checked
@@ -433,6 +577,7 @@ Empty Trash automatically = Off
 - Finder Settings -> Sidebar -> Tags :: ['Recent Tags'] = unchecked
 
 ### View Options - use as defaults
+
 - View Options -> Always open in list view = checked
 - View Options -> Browse in list view = checked
 - View Options -> Group files by = None
@@ -441,23 +586,28 @@ Empty Trash automatically = Off
 - View Options -> Text size = 12
 - View Options -> Show columns :: [Date Modified, Date Created, Date Added, Size, Kind, Version] = checked
 
-
 ## System Applications
 
 ### App Store
+
 - Settings -> In-App Ratings & Reviews = unchecked
 
 ### FaceTime
+
 ### Find My
+
 ### Messages
+
+- Settings -> Shared with You -> Automatic Sharing = unchecked
+- Settings -> iMessage -> Enable Messages in iCloud = checked
 - Settings -> General -> Set up Name and Photo Sharing... = {Name and Photo}
 - Settings -> General -> Auto-play message effects = unchecked
 - Settings -> General -> Play sound effects = unchecked
-- Settings -> iMessage -> Enable Messages in iCloud = checked
-- Settings -> Shared with You -> Automatic Sharing = unchecked
 
 ### Music
+
 Open Music, make sure computer is authorized, and set Library sync options.
+
 - Settings -> General -> Use Listening History = unchecked
 - Settings -> General -> Notifications -> When song changes = unchecked
 - Settings -> Playback -> Audio Quality -> Lossless Audio = checked
@@ -466,12 +616,15 @@ Open Music, make sure computer is authorized, and set Library sync options.
 - Settings -> Advanced -> Add songs to Library when adding to playlists = unchecked
 
 ### Photos
+
 Open Photos and make sure iCloud sync options are correct.
+
 - Settings -> General -> Memories -> Show Featured Content = unchecked
 - Settings -> General -> Memories -> Show Memories Notification = unchecked
 - Settings -> Shared Library -> Shared Library Suggestions = unchecked
 
 ### Safari
+
 - Settings -> General -> Remove history items = Manually
 - Settings -> General -> Remove download list items = When Safari quits
 - Settings -> General -> Open "safe" files after downloading = unchecked
@@ -486,33 +639,44 @@ Open Photos and make sure iCloud sync options are correct.
 ### Siri
 
 ### Terminal
-- Install theme
 
+- Install theme
 
 ## User Applications
 
 ### 1Password
+
 Open 1Password, sign in, and set up sync using details from iPhone.
+
 - Settings -> General -> Default Vault -> Save new items in = {Personal}
 - Settings -> Appearance -> Always Show in Sidebar :: [Categories, Tags] = checked
 - Settings -> Advanced -> Show debugging tools = checked
 - Settings -> Developer -> Command-Line Interface -> Connect with 1Password CLI = checked
+
 #### CLI Integration
+
 - 1Password -> Install 1Password CLI...
   - Install following [Get started with 1Password CLI](https://developer.1password.com/docs/cli/get-started/#install)
+
 ```bash
 op signin
 ```
+
 ##### SSH
+
 Import any new SSH keys into 1Password.
 Turn on the 1Password SSH Agent.
+
 - Settings -> Developer -> SSH Agent -> Setup SSH Agent...
 
 ##### Github
+
 - [Use 1Password to securely authenticate the GitHub CLI](https://developer.1password.com/docs/cli/shell-plugins/github)
+
 ```bash
 op plugin init gh
 ```
+
 - Select an existing item
   - _select existing GitHub Login from 1Password_
 - Set default credential scope -> Use as global default on my system
@@ -520,8 +684,10 @@ op plugin init gh
   - plugin.sh should already be sourced in Dotfiles `.bash_profile`
 
 ### Adobe Creative Cloud
+
 Open 1Password, sign in, and set up sync.
 Apps to install:
+
 - Photoshop
 - Illustrator
 - Acrobat DC
@@ -532,6 +698,7 @@ Apps to install:
 #### Lightroom Classic
 
 Copy settings from another computer
+
 ```bash
 ~/Library/Application Support/Adobe/CameraRaw/Settings/{profile_name}
 ~/Library/Application Support/Adobe/Lightroom
@@ -545,26 +712,34 @@ Copy settings from another computer
 - Settings -> External Editing -> Additional External Editor -> Resolution = 600
 
 ### Docker
+
 Open and 'Use recommended settings' to complete installation.
+
 - Settings -> General -> Send usage statistics = unchecked
 
 ### Doxie
+
 - Settings -> General -> Play sound effects = unchecked
 
 ### Dropbox
+
 Open Dropbox, sign in, and set up sync.
+
 - Settings -> Backup -> Show setup notifications when new external drives are plugged-in = unchecked
 - Settings -> Backup -> Enable camera uploads for = unchecked
 - Settings -> Notifications -> Notify me about :: [] =
 - checked
 
 ### Firefox
+
 Open app and do not import and setting or set as default browser.
 
 ### Google Chrome
+
 Open app and do not import and setting or set as default browser. Do not send usage statistics.
 
 ### iTerm
+
 - iTerm2 -> Make iTerm2 Default Term
 - iTerm2 -> Install Shell Integration
 - Preferences -> Profiles :: {import profile}
@@ -572,7 +747,9 @@ Open app and do not import and setting or set as default browser. Do not send us
 - Preferences -> Keys -> Hotkey :: Hotkey = ^`
 
 ### JetBrains Toolbox
+
 Open app and do not send usage statistics.
+
 - Settings -> Login
   Apps to install:
 - GoLand
@@ -586,12 +763,16 @@ Open app and do not send usage statistics.
 ### Notion
 
 ### Rectangle
+
 Open app and grant system permissions.
+
 #### Settings
+
 - Launch on login
 - Check for updates automatically
 
 ### Textmate
+
 - Settings -> Files -> With no open documents -> Create one at startup = unchecked
 - Settings -> Projects -> File browser location -> Folders on top = checked
 - Settings -> Projects -> Show file browser on = Left side
@@ -602,6 +783,7 @@ Open app and grant system permissions.
 - Settings -> Terminal :: Accept rmate connections = unchecked
 
 ### Tower
+
 - Settings -> General -> Terminal Application -> iTerm2
 - Settings -> General -> Automatically fetch remote repositories = Never (only manually)
 - Settings -> General -> Show Reflog in sidebar = checked
@@ -612,8 +794,11 @@ Open app and grant system permissions.
 - Settings -> Advanced -> Automatically index Git repositories = unchecked
 
 ## Cloud Services
+
 ### Github
-Visit the [GitHub SSH key settings page](https://github.com/settings/ssh/new) to upload your public key as both an _Authentication Key_ and a _Signin Key_.
+
+Visit the [GitHub SSH key settings page](https://github.com/settings/ssh/new) to upload your public key as both an _Authentication Key_ and a _Signing Key_.
 
 ### Gitlab
+
 Visit the [User settings -> SSH Keys page](https://gitlab.com/-/profile/keys) to upload your public key with Usage type = Authentication & Signing
