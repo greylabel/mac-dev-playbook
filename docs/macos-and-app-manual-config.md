@@ -392,6 +392,7 @@ Empty Trash automatically = Off
 
 - Allow applications downloaded from = App Store and identified developers
 - FileVault -> Turn On FileVault = checked
+  - Create a recovery key and do not use my iCloud account = checked
 
 ##### Others
 
@@ -573,8 +574,22 @@ Empty Trash automatically = Off
 - Finder Settings -> General -> Open folders in tabs instead of new windows = checked
 - Finder Settings -> Sidebar -> Favorites :: [Recents, Movies, Music, Pictures] = unchecked
 - Finder Settings -> Sidebar -> Favorites :: [AirDrop, Applications, Desktop, Documents, Downloads, Home] = checked
+- Finder Settings -> Sidebar -> iCloud Drive :: [] = unchecked
 - Finder Settings -> Sidebar -> Locations :: [] = unchecked
 - Finder Settings -> Sidebar -> Tags :: ['Recent Tags'] = unchecked
+- Finder Settings -> Advanced -> Show all filename extensions = checked
+- Finder Settings -> Advanced -> Show warning before changing an extension = unchecked
+- Finder Settings -> Advanced -> Show warning before removing from iCloud Drive = unchecked
+- Finder Settings -> Advanced -> Show warning before emptying the Trash = unchecked
+- Finder Settings -> Advanced -> Keep folders on top when
+  - In windows when sorting by name = checked
+  - On desktop = checked
+- Finder Settings -> Advanced -> When performing a search = Search the Current Folder
+
+### View Options - Desktop
+
+- Sort By = Snap to Grid
+- Show item info = checked
 
 ### View Options - use as defaults
 
@@ -625,6 +640,10 @@ Open Photos and make sure iCloud sync options are correct.
 
 ### Safari
 
+- Settings -> General -> Safari opens with = A new window
+- Settings -> General -> New windows open with = Empty Page
+- Settings -> General -> New tabs open with = Empty Page
+- Settings -> General -> Homepage = {empty}
 - Settings -> General -> Remove history items = Manually
 - Settings -> General -> Remove download list items = When Safari quits
 - Settings -> General -> Open "safe" files after downloading = unchecked
