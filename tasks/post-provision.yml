@@ -1,11 +1,13 @@
 ---
-- name: Check if Homebrew bash is installed
+- name: Check if Homebrew bash is installed.
   ansible.builtin.command: fgrep "{{ homebrew_prefix }}/bin/bash" /etc/shells
   register: homebrew_bash_installed
-- name: Add Homebrew bash to /etc/shells
+
+- name: Add Homebrew bash to /etc/shells.
   ansible.builtin.command: echo "{{homebrew_prefix}}/bin/bash" | sudo tee -a /etc/shells
   when: not homebrew_bash_installed.stdout
-- name: Change default shell to Homebrew bash
+
+- name: Change default shell to Homebrew bash.
   ansible.builtin.user:
     name: "{{ansible_user_id}}"
     shell: "{{homebrew_prefix}}/bin/bash"
