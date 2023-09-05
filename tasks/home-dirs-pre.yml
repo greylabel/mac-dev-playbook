@@ -5,3 +5,15 @@
     state: directory
     mode: '700'
   loop: "{{ home_dirs_code }}"
+
+### @TODO: Handle when multiple ALCs are set on a directory.
+- name: Check if ACL is set to prevent deletion on source code home directories.
+  ansible.builtin.shell: "ls -led ~/{{ item }} | tail +2 | sed 's/^ *[0-9][0-9]*: *//'"
+  loop: "{{ home_dirs_code }}"
+  register: home_dirs_acl
+  changed_when: false
+
+- name: Set ACL on directory to prevent deletion.
+  ansible.builtin.command: chmod +a "group:everyone deny delete" ~/{{ item }}
+  loop: "{{ home_dirs_acl.results }}"
+  when: item.stdout == ""
