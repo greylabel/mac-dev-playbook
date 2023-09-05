@@ -1,5 +1,5 @@
 ---
-- name: Create .gitconfig.local if not present
+- name: Create .gitconfig.local if not present.
   ansible.builtin.template:
     src: init/git/.gitconfig.local.j2
     dest: ~/.gitconfig.local
