@@ -1,6 +1,9 @@
 ---
 downloads: ~/.ansible-downloads/
 
+# Whether or not to set no_log to hide output for included config.yml file.
+congif_no_log: true
+
 ### Homebrew ###
 # See `geerlingguy.mac.homebrew` role documentation for usage instructions.
 # https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/homebrew/README.md
@@ -332,83 +335,109 @@ mas_installed_apps:
 # https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/dock/README.md
 configure_dock: true
 dockitems_remove:
+  # System Applications
   - "App Store"
   - "Calendar"
   - "Contacts"
   - "FaceTime"
   - "Freeform"
+  - "Home"
   - "Keynote"
+  - "Launchpad"
   - "Mail"
   - "Maps"
+  - "Messages"
+  - "Music"
   - "News"
   - "Notes"
   - "Numbers"
   - "Pages"
   - "Podcasts"
+  - "Photos"
+  - "Reminders"
+  - "Safari"
   - "Siri"
+  - "System Settings"
   - "Terminal"
   - "TV"
+  # User Applications
+  - "1Password"
+  - "Arduino IDE"
+  - "Discord"
+  - "Firefox"
+  - "iTerm"
+  - "NetNewsWire"
+  - "Notion"
+  - "Slack"
+  - "TextMate"
+  - "Tower"
+  - "TrainerRoad"
+  - "Visual Studio Code"
+  - "VLC"
 dockitems_persist:
   #  - name: "Finder"
   #    path: "/System/Library/CoreServices/Finder.app"
   #    pos: 0
-  - name: "Launchpad"
-    path: "/Applications/Launchpad.app"
-    pos: 1
   - name: "System Settings"
     path: "/System/Applications/System Settings.app"
-    pos: 2
+    pos: 1
   - name: "iTerm"
     path: "/Applications/iTerm.app"
-    pos: 3
+    pos: 2
   - name: "1Password"
     path: "/Applications/1Password.app"
-    pos: 4
+    pos: 3
   - name: "Tower"
     path: "/Applications/Tower.app"
+    pos: 4
+  - name: "Arduino IDE"
+    path: "/Applications/Arduino IDE.app"
     pos: 5
-  - name: "TablePlus"
-    path: "/Applications/TablePlus.app"
-    pos: 6
   - name: "TextMate"
     path: "/Applications/TextMate.app"
-    pos: 7
+    pos: 6
   - name: "Visual Studio Code"
     path: "/Applications/Visual Studio Code.app"
-    pos: 8
+    pos: 7
   - name: "Safari"
-    path: "/Applications/Safari.app"
-    pos: 9
+    path: "/System/Cryptexes/App/System/Applications/Safari.app"
+    pos: 8
   - name: "Firefox"
     path: "/Applications/Firefox.app"
+    pos: 9
+  - name: "NetNewsWire"
+    path: "/Applications/NetNewsWire.app"
     pos: 10
   - name: "Slack"
     path: "/Applications/Slack.app"
     pos: 11
+  - name: "Discord"
+    path: "/Applications/Discord.app"
+    pos: 12
   - name: "Messages"
     path: "/System/Applications/Messages.app"
-    pos: 12
+    pos: 13
   - name: "Photos"
     path: "/System/Applications/Photos.app"
-    pos: 13
+    pos: 14
   - name: "Notion"
     path: "/Applications/Notion.app"
-    pos: 14
+    pos: 15
   - name: "Music"
     path: "/System/Applications/Music.app"
-    pos: 15
+    pos: 16
   - name: "VLC"
     path: "/Applications/VLC.app"
-    pos: 16
+    pos: 17
   - name: "TrainerRoad"
     path: "/Applications/TrainerRoad.app"
-    pos: 17
+    pos: 18
   - name: "Reminders"
     path: "/System/Applications/Reminders.app"
-    pos: 18
+    pos: 19
   - name: "Home"
     path: "/System/Applications/Home.app"
-    pos: 19
+    pos: 20
 
 configure_osx: true
 osx_script: "~/.macos --no-restart"
