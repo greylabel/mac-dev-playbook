@@ -1,5 +1,23 @@
 ---
-- name: Ensure ssh-agent is running and add SSH key to the ssh-agent
-  shell: |
-    eval "$(ssh-agent)"
-    ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+# See: https://stackoverflow.com/questions/76194954/playbook-to-add-ssh-key-having-passphrase-and-reuse-ssh-auth-sock-ssh-agent-pid
+
+- name: Get ssh-agent PID and set as fact.
+  ansible.builtin.set_fact:
+    SSH_AGENT_PID: "{{ lookup('ansible.builtin.env', 'SSH_AGENT_PID') }}"
+
+- name: Check if ssh-agent process is running.
+  ansible.builtin.shell: "ps -p {{ lookup('ansible.builtin.env', 'SSH_AGENT_PID') }}"
+  register: ssh_agent_started
+  when: SSH_AGENT_PID != '' # should be checking type == int
+  changed_when: false
+
+- name: Check if key has been added to ssh-agent.
+  ansible.builtin.shell: ssh-add -l | grep "no identities"
+  register: ssh_key_added
+  changed_when: false
+
+# - name: Ensure ssh-agent is running and add SSH key to the ssh-agent.
+#   shell: |
+#     eval "$(ssh-agent)"
+#     ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+#   when: ssh_agent_started.skipped == true
