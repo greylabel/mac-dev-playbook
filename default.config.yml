@@ -77,6 +77,7 @@ homebrew_installed_packages:
   - php  # General-purpose scripting language
   - python  # Interpreted, interactive, object-oriented programming language
   - pyenv  # Python version management
+  - pyenv-virtualenv  # Pyenv plugin to manage virtualenv
   - ruby  # Powerful, clean, object-oriented scripting language
   - rbenv  # Ruby version manager
   - rust  # Safe, concurrent, practical language
@@ -101,6 +102,7 @@ homebrew_installed_packages:
   # - pv  # Monitor data's progress through a pipe
 
   ### Compression
+  # - bzip2  # Freely available high-quality data compressor
   # - p7zip  # 7-Zip (high compression file archiver) implementation
   # - pigz  # Parallel gzip
   # - zopfli  # New zlib (gzip, deflate) compatible compressor

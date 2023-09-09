@@ -8,7 +8,7 @@
 - name: Check if ssh-agent process is running.
   ansible.builtin.shell: "ps -p {{ lookup('ansible.builtin.env', 'SSH_AGENT_PID') }}"
   register: ssh_agent_started
-  when: SSH_AGENT_PID != '' # should be checking type == int
+  when: SSH_AGENT_PID != '' #  should be checking type == int
   changed_when: false
 
 - name: Check if key has been added to ssh-agent.
