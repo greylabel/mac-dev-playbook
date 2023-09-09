@@ -3,16 +3,20 @@
 
 - name: Get ssh-agent PID and set as fact.
   ansible.builtin.set_fact:
-    SSH_AGENT_PID: "{{ lookup('ansible.builtin.env', 'SSH_AGENT_PID') }}"
+    ssh_agent_pid: "{{ lookup('ansible.builtin.env', 'SSH_AGENT_PID') }}"
 
 - name: Check if ssh-agent process is running.
-  ansible.builtin.shell: "ps -p {{ lookup('ansible.builtin.env', 'SSH_AGENT_PID') }}"
+  ansible.builtin.shell: |
+    set -o pipefail
+    "ps -p {{ lookup('ansible.builtin.env', 'SSH_AGENT_PID') }}"
   register: ssh_agent_started
-  when: SSH_AGENT_PID != '' #  should be checking type == int
+  when: ssh_agent_pid != ''  # should be checking type == int
   changed_when: false
 
 - name: Check if key has been added to ssh-agent.
-  ansible.builtin.shell: ssh-add -l | grep "no identities"
+  ansible.builtin.shell: |
+    set -o pipefail
+    ssh-add -l | grep "no identities"
   register: ssh_key_added
   changed_when: false
 
