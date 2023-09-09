@@ -2,7 +2,7 @@
 downloads: ~/.ansible-downloads/
 
 # Whether or not to set no_log to hide output for included config.yml file.
-congif_no_log: true
+config_no_log: true
 
 ### Homebrew ###
 # See `geerlingguy.mac.homebrew` role documentation for usage instructions.

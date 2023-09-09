@@ -7,7 +7,7 @@
 
   pre_tasks:
     - name: Include playbook configuration.
-      no_log: "{{ congif_no_log | default(true) }}"
+      no_log: "{{ config_no_log | default(true) }}"
       include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
