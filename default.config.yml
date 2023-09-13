@@ -75,6 +75,7 @@ homebrew_installed_packages:
   - go  # Open source programming language to build simple/reliable/efficient software
   - lua  # Powerful, lightweight programming language
   - php  # General-purpose scripting language
+  - pipenv  # Python Development Workflow for Humans
   - python  # Interpreted, interactive, object-oriented programming language
   - pyenv  # Python version management
   - pyenv-virtualenv  # Pyenv plugin to manage virtualenv
