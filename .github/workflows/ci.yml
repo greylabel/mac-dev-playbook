@@ -20,11 +20,14 @@ jobs:
           python-version: '3.11'
           cache: 'pipenv'
 
-      - name: Install pipenv
+      - name: Get pipenv
         run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
-      - run: pipenv install
 
-      - name: Lint code.
-        run: |
-          yamllint .
-          ansible-lint
+      - name: Install pipenv
+        run: pipenv install
+
+      - name: Lint YAML
+        run: yamllint .
+
+      - name: Lint ansible
+        run: ansible-lint

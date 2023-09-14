@@ -78,7 +78,7 @@ homebrew_installed_packages:
   - pipenv  # Python Development Workflow for Humans
   - python  # Interpreted, interactive, object-oriented programming language
   - pyenv  # Python version management
-  - pyenv-virtualenv  # Pyenv plugin to manage virtualenv
+  # - pyenv-virtualenv  # Pyenv plugin to manage virtualenv
   - ruby  # Powerful, clean, object-oriented scripting language
   - rbenv  # Ruby version manager
   - rust  # Safe, concurrent, practical language
