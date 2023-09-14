@@ -20,18 +20,6 @@ jobs:
           python-version: '3.11'
           cache: 'pipenv'
 
-      # - name: Get pipenv
-      #   run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
-
-      # - name: Install pipenv
-      #   run: pipenv install --deploy --verbose
-
-      # - name: Lint YAML
-      #   run: yamllint .
-
-      # - name: Run ansible-lint
-      #   uses: ansible/ansible-lint@main
-
       - name: Install dependencies with pipenv
         run: |
           pip install pipenv
