@@ -12,23 +12,19 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out the codebase.
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        cache: 'pipenv'
 
-      - name: Set up Python 3.
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-          cache: 'pip'
+    - name: Install pipenv
+      run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+    - run: pipenv install
 
-      - name: Install pipenv
-        run: pip install pipenv
-
-      - name: Install packages
-        run: pipenv install --dev
-
-      - name: Lint code.
-        run: |
-          yamllint .
-          ansible-lint
+    - name: Lint code.
+      run: |
+        yamllint .
+        ansible-lint
