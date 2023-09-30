@@ -27,7 +27,7 @@ Install Xcode command line tools.
 xcode-select --install
 ```
 
-Agree To Xcode (only with a full Xcode installation).
+Agree To Xcode (only needed with a full Xcode installation).
 
 ```bash
 sudo xcrun cc
@@ -43,7 +43,7 @@ softwareupdate --install-rosetta --agree-to-license
 
 ### Manually installed apps
 
-Install applications that cannot be installed by Homebrew, through the App Store, or via another easy and Ansible-friendly scriptable process. This is done before the main playbook is run to ensure apps are in place for tasks that depend on their presence, like configuring the Dock.
+Install any applications that cannot be installed by Homebrew, through the App Store, or via an Ansible scriptable process. This is done before the main playbook is run to ensure apps are in place for tasks that depend on their presence, like configuring the Dock.
 
 ## Python and Ansible
 
@@ -79,11 +79,11 @@ Add Python 3 to `PATH` environment variable temporarily.
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 ```
 
-> _If desired, Ansible and Python 3 can be (re)installed by Homebrew when the main playbook is run, and thus managed by `brew` going forward._
+> _If desired, Ansible and Python 3 can be (re)installed by Homebrew when the main playbook is run, and thus managed by `brew` and/or a version manager like `pyenv` going forward._
 
 ## Mac Development Ansible Playbook
 
-### Get the playbook
+### The playbook
 
 Clone or download (this) [mac-dev-playbook](https://github.com/greylabel/mac-dev-playbook) git repo to a temporary location, or wherever you prefer to store source code checkouts, e.g. `/tmp` or `~/Projects`.
 
@@ -147,16 +147,13 @@ Create a `~/.gitconfig.local` file for username / github token / etc.
 
 #### Roles
 
-```bash
-ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "homebrew"
-ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "dotfiles"
-ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "mas"
-ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "dock"
-```
-
 ##### Command line tools
 
 ##### Homebrew
+
+```bash
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "homebrew"
+```
 
 Homebrew is installed by Ansible when the main playbook is run. Add Homebrew's `bin` directory to `PATH` environment variable, if needed for temporary use. This will be properly persisted when Dotfiles are installed later.
 
@@ -164,22 +161,39 @@ Homebrew is installed by Ansible when the main playbook is run. Add Homebrew's `
 
 #### Dotfiles
 
+```bash
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "dotfiles"
+```
+
 Dotfiles can be installed by Ansible when the main playbook is run. My [Dotfiles](https://github.com/greylabel/dotfiles/tree/main) include configuration for many of the packages installed by Homebrew, as well as an assortment of other tools and aliases.
 
 > Note: macOS scriptable settings are stored in the Dotfiles repo, as is custom with other dotfiles setups around the web, but can be applied by Ansible when the main playbook is run.
 
 ##### Mac App Store
 
+```bash
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "mas"
+```
+
 ##### Dock
+
+```bash
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "dock"
+```
 
 #### Tasks
 
-ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "extra-packages"
-ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "osx"
-
 ##### extra-packages
 
+```bash
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "extra-packages"
+```
+
 ##### osx
+
+```bash
+ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "osx"
+```
 
 ##### Post-provision tasks
 

@@ -1,6 +1,6 @@
 # Mac Teardown Process
 
-This document describes the full process of resetting a Mac that was set up following the [Mac Setup Process](mac-setup.md) to its factory settings — useful when preparing for a clean installation or getting ready to part ways with a computer.
+This document describes the process of resetting a Mac that was set up following the [Mac Setup Process](mac-setup.md) to its factory settings — useful when preparing for a clean installation or getting ready to part ways with a computer.
 
 ## Backup files in, 1Password, iCloud Drive or elsewhere
 

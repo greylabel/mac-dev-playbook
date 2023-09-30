@@ -1,7 +1,3 @@
-Figure out python installation workflow
-
-
-
 ### //// End of Doc :: Notes Below \\\\\\\
 
 - ssh key passphrase moved to `ansible vault` with password file stored in iCloud Drive
