@@ -266,6 +266,7 @@ homebrew_cask_apps:
   # - nano  # Free (GNU) replacement for the Pico text editor
   - netnewswire  # Free and open-source RSS reader
   - notion  # App to write, plan, collaborate, and get organized
+  - protonvpn  # VPN client focusing on security
   - raspberry-pi-imager  # Imaging utility to install operating systems to a microSD card
   - rectangle  # Move and resize windows using keyboard shortcuts or snap areas
   - slack  # Team communication and collaboration software
