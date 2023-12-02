@@ -28,6 +28,7 @@ homebrew_installed_packages:
   - shellcheck  # Static analysis and lint tool, for (ba)sh scripts
   # - zsh-completions  # Additional completion definitions for zsh
   - tmux  # Terminal multiplexer
+  # - tpm  # Plugin manager for tmux
 
   # GNU utils / updated version of OS X tools
   # - autoconf  # Automatic configure script builder
@@ -95,7 +96,7 @@ homebrew_installed_packages:
 
   ### Web framework dev tools
   # - ddev/ddev/ddev  # DDEV
-  # - symfony-cli/tap/symfony-cli  # Symfony CLI helps Symfony developers manage projects, from local code to remote infrastructure
+  - symfony-cli/tap/symfony-cli  # Symfony CLI helps Symfony developers manage projects, from local code to remote infrastructure
 
   ### Sys Monitoring
   - glances  # Alternative to top/htop
@@ -267,6 +268,7 @@ homebrew_cask_apps:
   - netnewswire  # Free and open-source RSS reader
   - notion  # App to write, plan, collaborate, and get organized
   - protonvpn  # VPN client focusing on security
+  # - raindropio  # All-in-one bookmark manager
   - raspberry-pi-imager  # Imaging utility to install operating systems to a microSD card
   - rectangle  # Move and resize windows using keyboard shortcuts or snap areas
   - slack  # Team communication and collaboration software
@@ -329,7 +331,7 @@ mas_installed_apps:
   - {id: 1569813296, name: "1Password for Safari"}
   - {id: 1481302432, name: "Instapaper Save"}
 #  - {id: 1568924476, name: "Mela — Recipe Manager"}
-#  - {id: 1449412482, name: "Reeder 4"}
+#  - {id: 1529448980, name: "Reeder 5."}
 #  - {id: id6447647340, name: "S3 Files"}
 #  - {id: 497799835, name: "Xcode"}
 

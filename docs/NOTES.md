@@ -94,7 +94,7 @@ See `.exports` and `.bash_profile`.
 NVM recommends installing via their own installer script. [See installation instructions here](https://github.com/creationix/nvm).
 
 ```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 ```
 
 Install node with `nvm install`, then select the locally-specified version for use with nvm use. If the node version needs to be changed, this can be done in the .nvmrc file in the root of a project's repository.
