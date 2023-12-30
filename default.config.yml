@@ -264,6 +264,7 @@ homebrew_cask_apps:
   # - kaleidoscope  # Spot and merge differences in text and image files or folders
   # - keep-it  # Notebook, scrapbook and organiser tool
   - linear-linear  # App to manage software development and track bugs
+  # - maestral  # Open-source Dropbox client
   # - nano  # Free (GNU) replacement for the Pico text editor
   - netnewswire  # Free and open-source RSS reader
   - notion  # App to write, plan, collaborate, and get organized

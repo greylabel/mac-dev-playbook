@@ -41,6 +41,7 @@
 - [Kaleidoscope](https://www.kaleidoscopeapp.com)
 - [Keep It](http://reinventedsoftware.com/keepit/downloads/)
 - [Linear](https://linear.app)
+- [Maestral](https://maestral.app)
 - [Nano](https://www.nano-editor.org/download.php)
 - [NetNewsWire](http://netnewswireapp.com/mac/)
 - [Notion](https://www.notion.so/desktop)
