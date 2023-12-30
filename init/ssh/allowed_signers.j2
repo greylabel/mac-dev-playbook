@@ -1,0 +1,1 @@
+{{ ssh_allowed_signers_email | mandatory }} namespaces="git" {{ lookup("file", "~/.ssh/id_ed25519.pub") }}
