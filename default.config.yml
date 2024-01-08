@@ -95,6 +95,7 @@ homebrew_installed_packages:
   - yarn  # JavaScript package manager
 
   ### Web framework dev tools
+  - arduino-cli  # Arduino command-line interface
   # - ddev/ddev/ddev  # DDEV
   - symfony-cli/tap/symfony-cli  # Symfony CLI helps Symfony developers manage projects, from local code to remote infrastructure
 
