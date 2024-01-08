@@ -99,6 +99,10 @@ homebrew_installed_packages:
   # - ddev/ddev/ddev  # DDEV
   - symfony-cli/tap/symfony-cli  # Symfony CLI helps Symfony developers manage projects, from local code to remote infrastructure
 
+  ### AWS
+  - awscli  # Official Amazon AWS command-line interface
+  - cfn-lint  # Validate CloudFormation templates against the CloudFormation spec
+
   ### Sys Monitoring
   - glances  # Alternative to top/htop
   - ncdu  # NCurses Disk Usage
