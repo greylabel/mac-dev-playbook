@@ -233,6 +233,8 @@ homebrew_installed_packages:
   # - sqlmap  # Penetration testing for SQL injection and database servers
   # - xpdf  # PDF viewer
 
+  ### Other
+  - dockutil  # Tool for managing dock items
 
 homebrew_uninstalled_packages: []
 
@@ -294,10 +296,6 @@ homebrew_cask_apps:
   - font-fira-code
   - font-inter
   - font-jetbrains-mono
-
-  ### dockutil required for geerlingguy.mac.dock
-  # See: https://github.com/kcrawford/dockutil/issues/127
-  - hpedrorodrigues/tools/dockutil  # Command-line utility for managing macOS dock items
 
 ### Dotfiles ###
 # See `geerlingguy.dotfiles` role documentation for usage instructions.
