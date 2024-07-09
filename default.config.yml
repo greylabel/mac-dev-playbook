@@ -204,6 +204,7 @@ homebrew_installed_packages:
   # - pngcheck  # Print info and check PNG, JNG, and MNG files
   # - pngcrush  # Optimizer for PNG files
   - youtube-dl  # Download YouTube videos from the command-line
+  - yt-dlp  # Fork of youtube-dl with additional features and fixes
 
   ### Font tools
   # ### brew tap bramstein/webfonttools
