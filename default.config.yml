@@ -119,6 +119,7 @@ homebrew_installed_packages:
   ### Containers and orchestration
   # - docker  # Pack, ship and run any application as a lightweight container
   - colima  # Container runtimes on MacOS (and Linux) with minimal setup
+  # - orbstack  # Replacement for Docker Desktop
 
   ### Network
   # - dns2tcp  # TCP over DNS tunnel
