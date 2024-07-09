@@ -115,7 +115,7 @@ ansible-galaxy install -r requirements.yml
 
 ### Additional configuration
 
-Optionally, copy a `config.yml` file to he cloned `mac-dev-playbook` directory,  if configuration overrides are required.
+Optionally, copy a `config.yml` file to the cloned `mac-dev-playbook` directory,  if configuration overrides are required.
 
 #### Ansible Vault
 >

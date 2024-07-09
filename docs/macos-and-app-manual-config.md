@@ -746,8 +746,7 @@ Open Dropbox, sign in, and set up sync.
 
 - Settings -> Backup -> Show setup notifications when new external drives are plugged-in = unchecked
 - Settings -> Backup -> Enable camera uploads for = unchecked
-- Settings -> Notifications -> Notify me about :: [] =
-- checked
+- Settings -> Notifications -> Notify me about :: [] = checked
 
 ### Firefox
 
