@@ -157,7 +157,7 @@ ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "homebrew"
 
 Homebrew is installed by Ansible when the main playbook is run. Add Homebrew's `bin` directory to `PATH` environment variable, if needed for temporary use. This will be properly persisted when Dotfiles are installed later.
 
-> @TODO: Consider using [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) to manage package list and apps with a Brewfile, and potentially move back to Dotfiles repo.
+> @todo: Consider using [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) to manage package list and apps with a Brewfile, and potentially move back to Dotfiles repo.
 
 #### Dotfiles
 
@@ -199,15 +199,21 @@ ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "osx"
 
 tag `post`
 
+```bash
 ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "post"
+```
 
-> @TODO: Note about this is where tasks that are not idempotent live.
+> @todo: Note about this is where tasks that are not idempotent live.
 
 ###### Activate utils installed by Homebrew
 
 ## Manual App configuration
 
 See [Manual macOS and Application Configuration](macos-and-app-manual-config.md) for detailed configuration guide.
+
+## Other non- or externally managed software
+
+Install tools and packages that are managed through separate automation processes, e.g. additional Ansible playbooks, or otherwise manually provisioned.
 
 ## Additional assets
 

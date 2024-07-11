@@ -20,46 +20,46 @@ Not Now
 
 ### Sign In with Your Apple ID
 
-Set Up Later
+- _Set Up Later_
 
 ### Terms and Conditions
 
-Agree
+- _Agree_
 
 ### Create a Computer Account
 
-Full name:
-Account name:
-Password:
-Hint:
+- Full name:
+- Account name:
+- Password:
+- Hint:
 
 ### Enable Location Services
 
-Enable Location Services on this Mac = unchecked
+- Enable Location Services on this Mac = unchecked
 
 ### Select Your Time Zone
 
-Set time zone automatically using current location = unchecked
-Closest City:
+- Set time zone automatically using current location = unchecked
+- Closest City:
 
 ### Analytics
 
-Share Mac Analytics with Apple = unchecked
-Share crash data with app developers = unchecked
+- Share Mac Analytics with Apple = unchecked
+- Share crash data with app developers = unchecked
 
 ### Screen Time
 
-Set Up Later
+- _Set Up Later_
 
 ### Enable Siri
 
-Enable Ask Siri = unchecked
+- Enable Ask Siri = unchecked
 
 ### Touch ID
 
 ### Choose Your Look
 
-Auto
+- Auto
 
 ## Manual macOS config
 
@@ -171,7 +171,7 @@ Auto
 
 ##### Application Notifications
 >
-> @TODO: Explore how to programmatically configure these settings.
+> @todo: Explore how to programmatically configure these settings.
 
 #### Sound
 
