@@ -242,7 +242,6 @@ homebrew_uninstalled_packages: []
 
 homebrew_taps:
   - homebrew/bundle
-  - homebrew/cask-fonts
   - 1password/tap
 
 homebrew_cask_accept_external_apps: true
