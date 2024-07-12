@@ -499,4 +499,4 @@ pre_provision_tasks:
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks:
   - tasks/post-provision.yml
-  - tasks/ssh-post.yml
+  # - tasks/ssh-post.yml  # needs refactoring
