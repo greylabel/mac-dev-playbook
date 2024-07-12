@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 ansible = "*"
+bcrypt = "*"
 
 [dev-packages]
 yamllint = "*"
