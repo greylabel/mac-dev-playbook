@@ -81,6 +81,22 @@ export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 > _If desired, Ansible and Python 3 can be (re)installed by Homebrew when the main playbook is run, and thus managed by `brew` and/or a version manager like `pyenv` going forward._
 
+### Python interpreter
+
+> See [Python 3 Support](https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html) for details on choosing the correct Python interpreter.
+
+Confirm the Python version used by Ansible.
+
+```bash
+`ansible --version | grep "python version"`
+```
+
+Use the `-e` command line option to manually set the python interpreter for a comment, if needed.
+
+```bash
+ansible-playbook sample-playbook.yml -e 'ansible_python_interpreter=/usr/bin/python3'
+```
+
 ## Mac Development Ansible Playbook
 
 ### The playbook
@@ -196,8 +212,6 @@ ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "osx"
 ```
 
 ##### Post-provision tasks
-
-tag `post`
 
 ```bash
 ansible-playbook main.yml --ask-become-pass --ask-vault-pass --tags "post"
