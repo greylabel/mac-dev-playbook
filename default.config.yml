@@ -335,7 +335,6 @@ dotfiles_files:
 mas_installed_apps:
   - {id: 1569813296, name: "1Password for Safari"}
   - {id: 288545208, name: "Instapaper"}
-  - {id: 1481302432, name: "Instapaper Save"}
 # - {id: 888422857, name: "Overcast"}  # Overcast is only available for M1 or later Macs
 #  - {id: 1568924476, name: "Mela — Recipe Manager"}
 #  - {id: 1529448980, name: "Reeder 5."}

@@ -77,4 +77,3 @@
 [Safari Extensions](https://safari-extensions.apple.com)
 
 - [1Password for Safari](https://apps.apple.com/us/app/1password-for-safari/id1569813296?mt=12)
-- [Instapaper Save](https://apps.apple.com/us/app/instapaper-save/id1481302432?mt=12)
