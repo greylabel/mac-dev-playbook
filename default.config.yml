@@ -88,6 +88,8 @@ homebrew_installed_packages:
   # - rbenv-gemset  # Adds basic gemset support to rbenv
 
   ### Package managers
+  # - bazel  # Google's own build tool
+  - bazelisk  # User-friendly launcher for Bazel
   - composer  # Dependency Manager for PHP
   # - node  # Platform built on V8 to build network applications
   # - nvm  # Manage multiple Node.js versions
