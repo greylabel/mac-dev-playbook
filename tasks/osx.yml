@@ -1,5 +1,35 @@
 ---
-# TODO: Use sudo once .osx can be run via root with no user interaction.
-- name: Run .osx dotfiles.
-  command: "{{ osx_script }}"
-  changed_when: false
+# See: https://docs.ansible.com/ansible/latest/collections/community/general/osx_defaults_module.html
+# @todo: Use sudo once .osx can be run via root with no user interaction.
+# - name: Run .osx dotfiles.
+#   command: "{{ osx_script }}"
+#   changed_when: false
+
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+###############################################################################
+
+# Disable press-and-hold for keys in favor of key repeat
+- name: defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+  community.general.osx_defaults:
+  domain: NSGlobalDomain
+  key: ApplePressAndHoldEnabled
+  type: bool
+  value: false
+  state: present
+
+# Set a blazingly fast keyboard repeat rate
+- name: defaults write NSGlobalDomain KeyRepeat -int 1
+  community.general.osx_defaults:
+  domain: NSGlobalDomain
+  key: KeyRepeat
+  type: int
+  value: 1
+  state: present
+- name: defaults write NSGlobalDomain InitialKeyRepeat -int 10
+  community.general.osx_defaults:
+  domain: NSGlobalDomain
+  key: InitialKeyRepeat
+  type: int
+  value: 10
+  state: present
