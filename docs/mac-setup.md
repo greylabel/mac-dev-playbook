@@ -88,7 +88,7 @@ export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 Confirm the Python version used by Ansible.
 
 ```bash
-`ansible --version | grep "python version"`
+ansible --version | grep "python version"
 ```
 
 Use the `-e` command line option to manually set the python interpreter for a comment, if needed.
