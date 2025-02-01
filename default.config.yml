@@ -99,6 +99,8 @@ homebrew_installed_packages:
   ### Web framework dev tools
   - arduino-cli  # Arduino command-line interface
   # - ddev/ddev/ddev  # DDEV
+  - hashicorp/tap/terraform  # Terraform
+  - snowflake-cli  # A CLI for Snowflake development
   - symfony-cli/tap/symfony-cli  # Symfony CLI helps Symfony developers manage projects, from local code to remote infrastructure
 
   ### AWS
@@ -244,7 +246,9 @@ homebrew_uninstalled_packages: []
 
 homebrew_taps:
   - homebrew/bundle
+  - hashicorp/tap
   - 1password/tap
+  - snowflakedb/snowflake-cli
 
 homebrew_cask_accept_external_apps: true
 homebrew_cask_appdir: /Applications
