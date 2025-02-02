@@ -77,6 +77,7 @@ homebrew_installed_packages:
   - lua  # Powerful, lightweight programming language
   - php  # General-purpose scripting language
   - pipenv  # Python Development Workflow for Humans
+  - pipx  # Execute binaries from Python packages in isolated environments
   - python  # Interpreted, interactive, object-oriented programming language
   - pyenv  # Python version management
   # - pyenv-virtualenv  # Pyenv plugin to manage virtualenv
