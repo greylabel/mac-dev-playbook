@@ -69,6 +69,7 @@ homebrew_installed_packages:
   - git-delta  # Syntax-highlighting pager for git and diff output
   - git-lfs  # Git extension for versioning large files
   - gh  # GitHub command-line tool
+  - withgraphite/tap/graphite  # Allows you to manage your stacked changes and submit them for review on GitHub
   # - bfg  # Remove large files or passwords from Git history like git-filter-branch
 
   ### - Languages and version managers
