@@ -100,6 +100,7 @@ homebrew_installed_packages:
 
   ### Web framework dev tools
   - arduino-cli  # Arduino command-line interface
+  - astro  # To build and run Airflow DAGs locally and interact with the Astronomer API
   # - ddev/ddev/ddev  # DDEV
   - hashicorp/tap/terraform  # Terraform
   - snowflake-cli  # A CLI for Snowflake development
