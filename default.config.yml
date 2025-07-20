@@ -98,13 +98,15 @@ homebrew_installed_packages:
   - mas  # Mac App Store command-line interface
   - yarn  # JavaScript package manager
 
-  ### Web framework dev tools
+  ### Framework dev tools
   - arduino-cli  # Arduino command-line interface
   - astro  # To build and run Airflow DAGs locally and interact with the Astronomer API
   # - ddev/ddev/ddev  # DDEV
   - hashicorp/tap/terraform  # Terraform
   - snowflake-cli  # A CLI for Snowflake development
   - symfony-cli/tap/symfony-cli  # Symfony CLI helps Symfony developers manage projects, from local code to remote infrastructure
+  - terragrunt  # Thin wrapper for Terraform e.g. for locking state
+  - uv  # Extremely fast Python package installer and resolver, written in Rust
 
   ### AWS
   - awscli  # Official Amazon AWS command-line interface
