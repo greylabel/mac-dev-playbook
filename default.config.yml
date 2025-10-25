@@ -103,6 +103,7 @@ homebrew_installed_packages:
   - astro  # To build and run Airflow DAGs locally and interact with the Astronomer API
   # - ddev/ddev/ddev  # DDEV
   - hashicorp/tap/terraform  # Terraform
+  - just  # Handy way to save and run project-specific commands
   - snowflake-cli  # A CLI for Snowflake development
   - symfony-cli/tap/symfony-cli  # Symfony CLI helps Symfony developers manage projects, from local code to remote infrastructure
   - terragrunt  # Thin wrapper for Terraform e.g. for locking state
