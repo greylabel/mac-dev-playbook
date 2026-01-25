@@ -56,7 +56,7 @@ which python3 && python3 --version
 Upgrade essential packages. Note that running `pip3` without `sudo` with default to a user installation in `~/Library/Python/`.
 
 ```bash
-python3 -m pip install --user --upgrade pip setuptools virtualenv ipython
+python3 -m pip install --user --upgrade pip setuptools virtualenv ipython bpython
 ```
 
 Install bcrypt — required for generating and securing SSH keys with ansible.
