@@ -10,26 +10,26 @@
 ###############################################################################
 
 # Disable press-and-hold for keys in favor of key repeat
-- name: defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+- name: Defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
   community.general.osx_defaults:
-  domain: NSGlobalDomain
-  key: ApplePressAndHoldEnabled
-  type: bool
-  value: false
-  state: present
+    domain: NSGlobalDomain
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: false
+    state: present
 
 # Set a blazingly fast keyboard repeat rate
-- name: defaults write NSGlobalDomain KeyRepeat -int 1
+- name: Defaults write NSGlobalDomain KeyRepeat -int 1
   community.general.osx_defaults:
-  domain: NSGlobalDomain
-  key: KeyRepeat
-  type: int
-  value: 1
-  state: present
-- name: defaults write NSGlobalDomain InitialKeyRepeat -int 10
+    domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 1
+    state: present
+- name: Defaults write NSGlobalDomain InitialKeyRepeat -int 10
   community.general.osx_defaults:
-  domain: NSGlobalDomain
-  key: InitialKeyRepeat
-  type: int
-  value: 10
-  state: present
+    domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: int
+    value: 10
+    state: present
