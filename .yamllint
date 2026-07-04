@@ -7,4 +7,5 @@ rules:
     level: warning
 
 ignore: |
+  .venv/
   .github/stale.yml

@@ -1,0 +1,13 @@
+[project]
+name = "mac-dev-playbook"
+version = "0.1.0"
+description = "Mac development workstation provisioning with Ansible"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = ["ansible", "bcrypt"]
+
+[dependency-groups]
+dev = ["ansible-lint", "yamllint"]
+
+[tool.uv]
+package = false
