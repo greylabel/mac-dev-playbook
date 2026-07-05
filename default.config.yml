@@ -22,7 +22,6 @@ homebrew_installed_packages:
 
   ### Shells
   - bash  # Bourne-Again SHell, a UNIX command interpreter
-  # - bash-completion  # Programmable completion for Bash 3.2
   - bash-completion@2  # Programmable completion for Bash 4.2+
   # - fish  # User-friendly command-line shell for UNIX-like operating systems
   - shellcheck  # Static analysis and lint tool, for (ba)sh scripts
@@ -50,7 +49,7 @@ homebrew_installed_packages:
   # - grc  # Colorize logfiles and command output
   # - lsd  # Clone of ls with colorful output, file type icons, and more
   - tcl-tk  # Tool Command Language
-  - tldr  # Simplified and community-driven man page
+  - tlrc  # Official tldr client written in Rust
   - tree  # Display directories as trees (with optional color/HTML output)
   # - z  # Tracks most-used directories to make cd smarter
   # - zsh-history-substring-search  # Zsh port of Fish shell's history search
@@ -77,7 +76,6 @@ homebrew_installed_packages:
   - go  # Open source programming language to build simple/reliable/efficient software
   - lua  # Powerful, lightweight programming language
   - php  # General-purpose scripting language
-  - pipenv  # Python Development Workflow for Humans
   - pipx  # Execute binaries from Python packages in isolated environments
   - python  # Interpreted, interactive, object-oriented programming language
   - pyenv  # Python version management
@@ -91,27 +89,28 @@ homebrew_installed_packages:
 
   ### Package managers
   # - bazel  # Google's own build tool
-  - bazelisk  # User-friendly launcher for Bazel
+  # - bazelisk  # User-friendly launcher for Bazel
   - composer  # Dependency Manager for PHP
   # - node  # Platform built on V8 to build network applications
   # - nvm  # Manage multiple Node.js versions
   - mas  # Mac App Store command-line interface
-  - yarn  # JavaScript package manager
+  # - yarn  # JavaScript package manager
 
   ### Framework dev tools
+  - 1password/tap/1password-cli  # Command-line interface for 1Password
   - arduino-cli  # Arduino command-line interface
   - astro  # To build and run Airflow DAGs locally and interact with the Astronomer API
   # - ddev/ddev/ddev  # DDEV
   - hashicorp/tap/terraform  # Terraform
   - just  # Handy way to save and run project-specific commands
-  - snowflake-cli  # A CLI for Snowflake development
+  - snowflakedb/snowflake-cli  # A CLI for Snowflake development
   - symfony-cli/tap/symfony-cli  # Symfony CLI helps Symfony developers manage projects, from local code to remote infrastructure
-  - terragrunt  # Thin wrapper for Terraform e.g. for locking state
+  # - terragrunt  # Thin wrapper for Terraform e.g. for locking state
   - uv  # Extremely fast Python package installer and resolver, written in Rust
 
   ### AWS
   - awscli  # Official Amazon AWS command-line interface
-  - cfn-lint  # Validate CloudFormation templates against the CloudFormation spec
+  # - cfn-lint  # Validate CloudFormation templates against the CloudFormation spec
 
   ### Sys Monitoring
   - glances  # Alternative to top/htop
@@ -128,7 +127,7 @@ homebrew_installed_packages:
 
   ### Containers and orchestration
   # - docker  # Pack, ship and run any application as a lightweight container
-  - colima  # Container runtimes on MacOS (and Linux) with minimal setup
+  # - colima  # Container runtimes on MacOS (and Linux) with minimal setup
   # - orbstack  # Replacement for Docker Desktop
 
   ### Network
@@ -175,8 +174,8 @@ homebrew_installed_packages:
   - ack  # Search tool like grep, but optimized for programmers
   # - fd  # Simple, fast and user-friendly alternative to find
   # - fzf  # Command-line fuzzy finder written in Go
-  - pcre  # Perl compatible regular expressions library
-  # - ripgrep  # Search tool like grep and The Silver Searcher
+  - pcre2  # Perl compatible regular expressions library with a new API
+  - ripgrep  # Search tool like grep and The Silver Searcher
 
   ### Text and editors
   - bat  # Clone of cat(1) with syntax highlighting and Git integration
@@ -208,14 +207,14 @@ homebrew_installed_packages:
   # - ffmpeg  # Play, record, convert, and stream audio and video
   # - gifsicle  # GIF image/animation creator/editor
   # - gs  # Interpreter for PostScript and PDF
-  - icoutils  # Create and extract MS Windows icons and cursors
+  # - icoutils  # Create and extract MS Windows icons and cursors
   # - imagemagick  # Tools and libraries to manipulate images in many formats
   # - jpegoptim  # Utility to optimize JPEG files
   # - netpbm  # Image manipulation
   # - pngcheck  # Print info and check PNG, JNG, and MNG files
   # - pngcrush  # Optimizer for PNG files
-  - youtube-dl  # Download YouTube videos from the command-line
-  - yt-dlp  # Fork of youtube-dl with additional features and fixes
+  # - youtube-dl  # Download YouTube videos from the command-line
+  # - yt-dlp  # Fork of youtube-dl with additional features and fixes
 
   ### Font tools
   # ### brew tap bramstein/webfonttools
@@ -251,32 +250,31 @@ homebrew_installed_packages:
 homebrew_uninstalled_packages: []
 
 homebrew_taps:
-  - homebrew/bundle
-  - hashicorp/tap
   - 1password/tap
+  - hashicorp/tap
   - snowflakedb/snowflake-cli
+  - symfony-cli/tap
+  - withgraphite/tap
 
 homebrew_cask_accept_external_apps: true
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   ### Cask
   - 1password  # Password manager that keeps all passwords secure behind one password
-  - 1password/tap/1password-cli  # Command-line interface for 1Password
-  - adobe-creative-cloud  # Collection of apps and services for photography, design, video, web, and UX
+  # - adobe-creative-cloud  # Collection of apps and services for photography, design, video, web, and UX
   # - airfoil  # Sends audio from computer to outputs
   - arduino-ide  # Electronics prototyping platform
-  - backblaze  # Data backup and storage service
+  # - backblaze  # Data backup and storage service
   # - bbedit  # Text, code, and markup editor
   # - billings-pro  # Invoices, estimates, quotes and time-tracking
-  - chromedriver  # Automated testing of webapps for Google Chrome
   # - cyberduck  # Server and cloud storage browser
   - discord  # Voice and text chat software
   - docker  # App to build and share containerized applications and microservice
   - doxie  # Companion app for scanner hardware
   - dropbox  # Client for the Dropbox cloud storage service
-  - figma  # Collaborative team software
+  # - figma  # Collaborative team software
   - firefox  # Web browser
-  - handbrake  # Open-source video transcoder available for Linux, Mac, and Windows
+  # - handbrake  # Open-source video transcoder available for Linux, Mac, and Windows
   - garmin-express  # Update maps and software, sync with Garmin Connect and register your device
   - google-chrome  # Web browser
   - iterm2  # Terminal emulator as alternative to Apple's Terminal app
@@ -288,6 +286,7 @@ homebrew_cask_apps:
   # - nano  # Free (GNU) replacement for the Pico text editor
   - netnewswire  # Free and open-source RSS reader
   - notion  # App to write, plan, collaborate, and get organized
+  - obsidian  # Knowledge base that works on top of a local folder of plain text Markdown files
   - protonvpn  # VPN client focusing on security
   - raspberry-pi-imager  # Imaging utility to install operating systems to a microSD card
   # - raycast  # Control your tools with a few keystrokes
@@ -295,8 +294,8 @@ homebrew_cask_apps:
   - slack  # Team communication and collaboration software
   - tableplus  # Native GUI tool for relational databases
   - textmate  # General-purpose text editor
-  - trainerroad  # Cycling training system
-  - tower  # Git client focusing on power and productivity
+  # - trainerroad  # Cycling training system
+  # - tower  # Git client focusing on power and productivity
   # - vagrant  # Development environment
   # - virtualbox  # Virtualizer for x86 hardware
   - visual-studio-code  # Microsoft Visual Studio Code
