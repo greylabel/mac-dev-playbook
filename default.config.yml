@@ -24,6 +24,7 @@ homebrew_installed_packages:
   - bash  # Bourne-Again SHell, a UNIX command interpreter
   - bash-completion@2  # Programmable completion for Bash 4.2+
   # - fish  # User-friendly command-line shell for UNIX-like operating systems
+  - herdr  # Agent multiplexer that lives in your terminal
   - shellcheck  # Static analysis and lint tool, for (ba)sh scripts
   # - zsh-completions  # Additional completion definitions for zsh
   - tmux  # Terminal multiplexer
@@ -181,6 +182,7 @@ homebrew_installed_packages:
   - bat  # Clone of cat(1) with syntax highlighting and Git integration
   # - doxygen  # Generate documentation for several programming languages
   # - graphviz  # Graph visualization software from AT&T and Bell Labs
+  - neovim  # Ambitious Vim-fork focused on extensibility and agility
   - readline  # Library for command-line editing
   - rename  # Perl-powered file rename script with many helpful built-ins
   - rlwrap  # Readline wrapper: adds readline support to tools that lack it
@@ -267,6 +269,7 @@ homebrew_cask_apps:
   # - backblaze  # Data backup and storage service
   # - bbedit  # Text, code, and markup editor
   # - billings-pro  # Invoices, estimates, quotes and time-tracking
+  - claude-code@latest  # Terminal-based AI coding assistant
   # - cyberduck  # Server and cloud storage browser
   - discord  # Voice and text chat software
   - docker  # App to build and share containerized applications and microservice
@@ -277,6 +280,7 @@ homebrew_cask_apps:
   # - handbrake  # Open-source video transcoder available for Linux, Mac, and Windows
   - garmin-express  # Update maps and software, sync with Garmin Connect and register your device
   - google-chrome  # Web browser
+  - ghostty  # Terminal emulator that uses platform-native UI and GPU acceleration
   - iterm2  # Terminal emulator as alternative to Apple's Terminal app
   # - jetbrains-toolbox  # JetBrains Toolbox
   # - kaleidoscope  # Spot and merge differences in text and image files or folders
