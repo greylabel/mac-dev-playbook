@@ -25,6 +25,17 @@ Setup goes through the following automated [A] and manual [M] steps.
    1. [M] Copy in additional config files and vaults.
    1. [M] Install requirements and run playbook.
 
+### Python tooling (uv)
+
+Install Python dependencies (including lint tools):
+
+    uv sync --group dev
+
+Run checks:
+
+    uv run yamllint .
+    uv run ansible-lint
+
 ### Ansible playbook
 
 1. [A] Ensure OS X Command Line Tools are installed
