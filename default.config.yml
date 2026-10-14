@@ -186,6 +186,7 @@ homebrew_installed_packages:
   - readline  # Library for command-line editing
   - rename  # Perl-powered file rename script with many helpful built-ins
   - rlwrap  # Readline wrapper: adds readline support to tools that lack it
+  - tree-sitter-cli  # Parser generator tool
   - vim  # Vi 'workalike' with many additional features
 
   ### Diff
