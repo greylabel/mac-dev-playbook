@@ -173,7 +173,7 @@ homebrew_installed_packages:
 
   ### Search
   - ack  # Search tool like grep, but optimized for programmers
-  # - fd  # Simple, fast and user-friendly alternative to find
+  - fd  # Simple, fast and user-friendly alternative to find
   # - fzf  # Command-line fuzzy finder written in Go
   - pcre2  # Perl compatible regular expressions library with a new API
   - ripgrep  # Search tool like grep and The Silver Searcher
